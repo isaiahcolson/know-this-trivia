@@ -37,6 +37,7 @@ body {
 
 .questions {
     margin: 0 50px 0 50px;
+    width: 250px;
 }
 
 .quiz-container .img {
