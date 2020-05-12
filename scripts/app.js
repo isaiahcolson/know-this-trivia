@@ -65,6 +65,12 @@ let questionTracker = 0;
 
 displayQuestions(questions[0]);
 
+const $removeSelection = () => {
+    $removeCheck = $('input[name=answers]:checked').prop('checked', false);
+    // $removeCheck.checked = false;
+    console.log($removeCheck);
+}
+
 // console.log(question1);
 
 $('button').click(function() {
@@ -76,5 +82,6 @@ $('button').click(function() {
     checkValue(questions[questionTracker]);
     questionTracker++;
     displayQuestions(questions[questionTracker]);
+    $removeSelection();
     // checkValue(question2);
 });
