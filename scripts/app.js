@@ -1,41 +1,93 @@
-/* const question1 = {
-    question: 'Who is this?',
-    image: 'images/test.png',
-    optionA: 'A. Martha Stewart',
-    optionB: 'B. Mr. Poopybutthole',
-    optionC: 'C. Pickle Rick',
-    optionD: 'D. Scary Terry',
-    correct: 'C. Pickle Rick'
-};
- */
-/* const question2 = {
-    question: 'What is the name of Morty\'s dog?',
-    image: 'images/snowball.jpeg',
-    optionA: 'A. Snowball',
-    optionB: 'B. Fluffles',
-    optionC: 'C. Squanchy',
-    optionD: 'D. Simba',
-    correct: 'A. Snowball'
-}; */
-
 const questions = [
     {
-        question: 'Who is this?',
-        image: 'images/test.png',
-        optionA: 'A. Martha Stewart',
-        optionB: 'B. Mr. Poopybutthole',
-        optionC: 'C. Pickle Rick',
-        optionD: 'D. Scary Terry',
-        correct: 'C. Pickle Rick'
+        question: 'When did Rick & Morty first air?',
+        image: 'images/1-1.png',
+        optionA: 'A. January 2014',
+        optionB: 'B. March 2015',
+        optionC: 'C. December 2013',
+        optionD: 'D. August 2013',
+        correct: 'C. December 2013'
     },
     {
         question: 'What is the name of Morty\'s dog?',
-        image: 'images/snowball.jpeg',
+        image: 'images/1-2.jpeg',
         optionA: 'A. Snowball',
         optionB: 'B. Fluffles',
         optionC: 'C. Squanchy',
         optionD: 'D. Simba',
         correct: 'A. Snowball'
+    },
+    {
+        question: 'Who voices Fart?',
+        image: 'images/1-3.png',
+        optionA: 'A. Oscar the Grouch',
+        optionB: 'B. Jemaine Clement',
+        optionC: 'C. Martha Stewart',
+        optionD: 'D. David Bowie',
+        correct: 'B. Jemaine Clement'
+    },
+    {
+        question: 'What does Jerry ask Meeseeks for help with?',
+        image: 'images/1-4.png',
+        optionA: 'A. Talk with Beth',
+        optionB: 'B. Kill Rick',
+        optionC: 'C. Job Presentation',
+        optionD: 'D. His Golf Game',
+        correct: 'D. His Golf Game'
+    },
+    {
+        question: 'What sauce did Rick want from McDonald\'s?',
+        image: 'images/1-5.png',
+        optionA: 'A. Ranch',
+        optionB: 'B. Sriracha',
+        optionC: 'C. Mac Sauce',
+        optionD: 'D. Szechuan Sauce',
+        correct: 'D. Szechuan Sauce'
+    },
+    {
+        question: 'Who is Rick\'s former lover?',
+        image: 'images/1-6.png',
+        optionA: 'A. Super Nova',
+        optionB: 'B. Unity',
+        optionC: 'C. Beth',
+        optionD: 'D. Jessica',
+        correct: 'B. Unity'
+    },
+    {
+        question: 'What is the name of Beth\'s imaginary world?',
+        image: 'images/1-7.jpeg',
+        optionA: 'A. Hoth',
+        optionB: 'B. Froopyland',
+        optionC: 'C. Neverland',
+        optionD: 'D. Atlantis',
+        correct: 'B. Froopyland'
+    },
+    {
+        question: 'Who voices Birdperson?',
+        image: 'images/1-8.jpeg',
+        optionA: 'A. Justin Roiland',
+        optionB: 'B. Thomas Middleditch',
+        optionC: 'C. Dan Harmon',
+        optionD: 'D. Lin Manuel Miranda',
+        correct: 'C. Dan Harmon'
+    },
+    {
+        question: 'Who is the first to go in \'Total Rickall\'?',
+        image: 'images/1-9.jpg',
+        optionA: 'A. Uncle Steve',
+        optionB: 'B. Pencilvester',
+        optionC: 'C. Mr. Poopybutthole',
+        optionD: 'D. The Butler',
+        correct: 'A. Uncle Steve'
+    },
+    {
+        question: 'What is the only thing Rick cares about in the Vindicators?',
+        image: 'images/1-10.png',
+        optionA: 'A. Noob Noob',
+        optionB: 'B. Nothing',
+        optionC: 'C. Morty',
+        optionD: 'D. Birdperson',
+        correct: 'A. Noob Noob'
     }
 ]
 
@@ -67,21 +119,15 @@ displayQuestions(questions[0]);
 
 const $removeSelection = () => {
     $removeCheck = $('input[name=answers]:checked').prop('checked', false);
-    // $removeCheck.checked = false;
-    console.log($removeCheck);
+    // console.log($removeCheck);
 }
-
-// console.log(question1);
 
 $('button').click(function() {
     // console.log('Clicked');
     // const $answer = $('input[name=answers]:checked').siblings('label').html();
-    // console.log($answer);
     // displayQuestions(question1);
-    this.checked = false;
     checkValue(questions[questionTracker]);
     questionTracker++;
     displayQuestions(questions[questionTracker]);
     $removeSelection();
-    // checkValue(question2);
 });

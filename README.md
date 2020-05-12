@@ -45,3 +45,19 @@ Still consisting of a "home" screen that will show user score for that theme
 
 Single page app
 local storage - high score
+
+
+
+
+
+<!-- Rick & Morty Questions -->
+1. When did Rick & Morty first air?
+2. What is the name of Morty's dog?
+3. Who voices Fart?
+4. What does Jerry ask Meeseeks for help with?
+5. What sauce did Rick want from McDonald's?
+6. Who is Rick's former lover?
+7. What is the name of Beth's imaginary world?
+8. Who voices Birdperson?
+9. Who is the first to go in 'Total Rickall'?
+10. What is the only thing Rick cares about in the Vindicators?
