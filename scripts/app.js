@@ -89,7 +89,10 @@ const questions = [
         optionD: 'D. Birdperson',
         correct: 'A. Noob Noob'
     }
-]
+];
+
+let questionTracker = 0;
+let score = 0;
 
 const displayQuestions = (question) => {
     $('.quiz-container h3').html(question.question);
@@ -106,14 +109,13 @@ const checkValue = (array) => {
     const $answer = $('input[name=answers]:checked').siblings('label').html();
     const correct = array.correct;
     if (correct === $answer) {
+        score++;
         console.log('Correct');
     } else {
         console.log('Incorrect');
     }
-    // console.log(`Correct answer is ${correct}`);
+    console.log(`Score: ${score}`);
 }
-
-let questionTracker = 0;
 
 displayQuestions(questions[0]);
 
