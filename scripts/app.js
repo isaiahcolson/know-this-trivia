@@ -118,8 +118,13 @@ const checkValue = (array) => {
     console.log(`Score: ${userScore}`);
 }
 
-// Initialize game with displaying first question in array
-displayQuestions(questions[0]);
+// Initialize game with displaying first question in array with click of button
+$('.launch__button').click(function() {
+    $('.quiz-container').css('display', 'flex');
+    displayQuestions(questions[0]);
+    $('.launch__button').remove();
+});
+// displayQuestions(questions[0]);
 
 // Removes previous radio selection
 const $removeSelection = () => {
@@ -173,7 +178,7 @@ const $gameCheck = () => {
 }
 
 // When button is clicked, game is being played
-$('button').click(function() {
+$('.questions__button').click(function() {
     // const $answer = $('input[name=answers]:checked').siblings('label').html();
     checkValue(questions[questionTracker]);
     questionTracker++;

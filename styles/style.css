@@ -27,7 +27,7 @@ body {
 
 .quiz-container {
     text-align: left;
-    display: flex;
+    display: none;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
@@ -97,7 +97,7 @@ h2 {
     margin: 20px 0;
 }
 
-.questions__button, .score__button {
+button {
     background: var(--primary);
     border: none;
     border-radius: 10px;
