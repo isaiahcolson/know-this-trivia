@@ -170,7 +170,7 @@ const $gameCheck = () => {
 /* Button event listeners */
 
 // Initialize game with displaying first question in array with click of button
-$('.launch__button').click(function() {
+$('.grid__item').click(function() {
     // $('.quiz-container').css('display', 'flex');
     $('.quiz-container').toggleClass('hidden');
     displayQuestions(questions[0]);

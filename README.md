@@ -32,19 +32,12 @@ Still consisting of a "home" screen that will show user score for that theme
 
 
 <!-- Stretch Goals -->
-1. Increase number of themes to 4 - Begin tracking total score - Place themes in a grid
+1. Increase number of themes to 4 - Place themes in a grid
 2. Increase number of themes to 9
-3. Try to create a carousel
+3. Track total score
 4. Increase number of themes to final number of 16
 5. Create a timer
 6. Give option for 2 players
-
-
-
-
-
-Single page app
-local storage - high score
 
 
 
