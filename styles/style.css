@@ -40,14 +40,10 @@ body {
 .questions {
     margin: 0 40px 0 40px;
     width: 270px;
-    /* background-image: linear-gradient(to bottom right, red, yellow); */
 }
 
 .quiz-container .img {
-    /* border-radius: 15px; */
     height: 350px;
-    /* width: 350px; */
-    /* box-shadow: 0px 15px 15px rgba(0,0,0,.2); */
 }
 
 label {
@@ -73,16 +69,35 @@ h2 {
     font-weight: 700;
     font-size: 1.8em;
     color: var(--dark);
+    margin: 0;
 }
 
 .score {
+    grid-template-columns: auto auto;
     display: none;
     background-image: url(../images/scorebackground.png);
     width: 700px;
     height: 350px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-button {
+.score__text {
+    width: 150px;
+}
+
+.score h2:nth-child(2) {
+    background-image: url(../images/10per.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 150px;
+    background-position: center;
+    line-height: 150px;
+    margin: 20px 0;
+}
+
+.questions__button, .score__button {
     background: var(--primary);
     border: none;
     border-radius: 10px;
@@ -98,7 +113,7 @@ button {
     letter-spacing: .1em;
 }
 
-button:hover {
+.questions__button:hover {
     background: var(--primary-dark);
     letter-spacing: .2em;
 }
