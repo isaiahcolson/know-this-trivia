@@ -12,6 +12,9 @@
     --grey: #e6e6e6;
     --light: #f9f9f9;
     --white: #FFF;
+
+    /* styling */
+    --border-radius: 15px;
 }
 
 body {
@@ -27,14 +30,35 @@ body {
 
 .launch__grid {
     display: grid;
-    grid-template-columns: auto auto;
-    padding: 10px;
+    grid-template-columns: auto auto auto auto;
+    border-radius: var(--border-radius);
 }
 
 .grid__item {
     text-align: center;
-    background-image: url(../images/1-1.png);
     cursor: pointer;
+    margin: 5px;
+    border-radius: var(--border-radius);
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ram {
+    background-image: url("../images/ramthumb.png");
+}
+
+.grid__item img:hover {
+    opacity: 0;
+}
+
+.grid__item img {
+    width: 150px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    vertical-align: middle;
+    opacity: 100;
+    transition: .2s ease;
 }
 
 .quiz-container {
@@ -44,7 +68,7 @@ body {
     align-items: center;
     justify-content: center;
     background-image: url(../images/questionbackground.png);
-    border-radius: 15px;
+    border-radius: var(--border-radius);
     box-shadow: 0px 15px 15px 5px rgba(0,0,0,.2);
     overflow: hidden;
 }
@@ -112,7 +136,7 @@ h2 {
 button {
     background: var(--primary);
     border: none;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     cursor: pointer;
     padding: 10px 20px;
     margin-top: 10px;
@@ -128,7 +152,7 @@ button {
 .score__replay {
     background: var(--secondary-alt);
     border: none;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     cursor: pointer;
     padding: 10px 20px;
     margin-top: 20px;
