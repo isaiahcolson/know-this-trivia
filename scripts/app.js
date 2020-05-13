@@ -118,14 +118,6 @@ const checkValue = (array) => {
     console.log(`Score: ${userScore}`);
 }
 
-// Initialize game with displaying first question in array with click of button
-$('.launch__button').click(function() {
-    $('.quiz-container').css('display', 'flex');
-    displayQuestions(questions[0]);
-    $('.launch__button').remove();
-});
-// displayQuestions(questions[0]);
-
 // Removes previous radio selection
 const $removeSelection = () => {
     $removeCheck = $('input[name=answers]:checked').prop('checked', false);
@@ -161,9 +153,6 @@ const $scoreImg = (score) => {
 // Display score through DOM
 const $displayScore = (score) => {
     $('.score h2').eq(1).html(`${score}/10`);
-    /* if ( score == 0 ) {
-        $('.score__text h2').eq(1).css('background-image', 'url(../images/0per.png)');
-    } */
     $scoreImg(score);
     // $('.score img').attr('src', '../images/10per.png');
 }
@@ -171,11 +160,24 @@ const $displayScore = (score) => {
 // If game is over, remove all questions and show score
 const $gameCheck = () => {
     console.log('Game over');
-    $('.img').remove();
-    $('.questions').remove();
-    $('.score').css('display', 'grid');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.score').toggleClass('hidden');
     $displayScore(userScore);
 }
+
+
+/* Button event listeners */
+
+// Initialize game with displaying first question in array with click of button
+$('.launch__button').click(function() {
+    // $('.quiz-container').css('display', 'flex');
+    $('.quiz-container').toggleClass('hidden');
+    displayQuestions(questions[0]);
+    $('.launch').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+});
 
 // When button is clicked, game is being played
 $('.questions__button').click(function() {
@@ -188,4 +190,26 @@ $('.questions__button').click(function() {
         $removeSelection();
         displayQuestions(questions[questionTracker]);
     }
+});
+
+// Replay match
+$('.score__replay').click(function() {
+    $('.score').toggleClass('hidden');
+    // $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+    displayQuestions(questions[0]);
+    $removeSelection();
+});
+
+// Return to launch screen
+$('.score__finish').click(function() {
+    // $('.score').toggleClass('hidden');
+    $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.score').toggleClass('hidden');
+    $('.launch').toggleClass('hidden');
 });

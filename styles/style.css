@@ -7,7 +7,7 @@
     --primary-dark: #d14745;
     --secondary: #55c4cf;
     --secondary-dark: #ee666d;
-    --primary-medium-alt: #62d8ae;
+    --secondary-alt: #62d8ae;
     --dark: #232832;
     --grey: #e6e6e6;
     --light: #f9f9f9;
@@ -27,7 +27,7 @@ body {
 
 .quiz-container {
     text-align: left;
-    display: none;
+    display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
@@ -74,7 +74,7 @@ h2 {
 
 .score {
     grid-template-columns: auto auto;
-    display: none;
+    display: grid;
     background-image: url(../images/scorebackground.png);
     width: 700px;
     height: 350px;
@@ -113,7 +113,36 @@ button {
     letter-spacing: .1em;
 }
 
+.score__replay {
+    background: var(--secondary-alt);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-family: var(--base-font);
+    color: var(--light);
+    font-size: 1em;
+    transition: .3s ease;
+    outline: none;
+    font-weight: 900;
+    letter-spacing: .1em;
+    display: block;
+}
+
+.score__replay:hover {
+    background: var(--secondary);
+}
+
+.score__finish:hover {
+    background: var(--primary-dark);
+}
+
 .questions__button:hover {
     background: var(--primary-dark);
     letter-spacing: .2em;
+}
+
+.hidden {
+    display: none;
 }
