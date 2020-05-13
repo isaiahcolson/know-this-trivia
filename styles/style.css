@@ -4,19 +4,21 @@
 
     /* colors */
     --primary: #ed4947;
-    --primary-dark: #BA3A38;
-    --primary-alt: #f08689;
-    --secondary-dark: #6B1A14;
-    --dark: #1A1A1A;
-    --grey: #d1d2db;
-    --light: #f2f2f2;
+    --primary-dark: #d14745;
+    --secondary: #55c4cf;
+    --secondary-dark: #ee666d;
+    --primary-medium-alt: #62d8ae;
+    --dark: #232832;
+    --grey: #e6e6e6;
+    --light: #f9f9f9;
+    --white: #FFF;
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: var(--primary-alt);
+    background: var(--grey);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,15 +31,16 @@ body {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    background: var(--light);
+    background-image: url(../images/questionbackground.png);
     border-radius: 15px;
-    box-shadow: 0px 15px 15px rgba(0,0,0,.2);
+    box-shadow: 0px 15px 15px 5px rgba(0,0,0,.2);
     overflow: hidden;
 }
 
 .questions {
-    margin: 0 50px 0 50px;
-    width: 250px;
+    margin: 0 40px 0 40px;
+    width: 270px;
+    /* background-image: linear-gradient(to bottom right, red, yellow); */
 }
 
 .quiz-container .img {
@@ -50,18 +53,19 @@ body {
 label {
     font-family: var(--base-font);
     color: var(--dark);
-    font-size: 1.2em;
+    font-size: 1.15em;
     padding: 5px;
     line-height: 2em;
+    font-weight: 500;
+    letter-spacing: -.025em;
 }
 
 h3 {
     font-family: var(--base-font);
     font-weight: 700;
     font-size: 1.5em;
-    letter-spacing: .03em;
     color: var(--dark);
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
 }
 
 h2 {
@@ -69,11 +73,13 @@ h2 {
     font-weight: 700;
     font-size: 1.8em;
     color: var(--dark);
-    margin: 0 0 20px 0;
 }
 
 .score {
     display: none;
+    background-image: url(../images/scorebackground.png);
+    width: 700px;
+    height: 350px;
 }
 
 button {
@@ -82,14 +88,17 @@ button {
     border-radius: 10px;
     cursor: pointer;
     padding: 10px 20px;
-    margin-top: 50px;
+    margin-top: 10px;
     font-family: var(--base-font);
     color: var(--light);
     font-size: 1em;
     transition: .3s ease;
     outline: none;
+    font-weight: 900;
+    letter-spacing: .1em;
 }
 
 button:hover {
     background: var(--primary-dark);
+    letter-spacing: .2em;
 }

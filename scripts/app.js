@@ -1,6 +1,7 @@
+/* Rick & Morty questions */
 const questions = [
     {
-        question: 'When did Rick & Morty first air?',
+        question: 'When did \'Rick and Morty\' first air?',
         image: 'images/1-1.png',
         optionA: 'A. January 2014',
         optionB: 'B. March 2015',
@@ -91,9 +92,10 @@ const questions = [
     }
 ];
 
-let questionTracker = 0;
+let questionTracker = 9;
 let userScore = 0;
 
+// DOM manipulation - reaches into the array given to display value
 const displayQuestions = (question) => {
     $('.quiz-container h3').html(question.question);
     $('.quiz-container img').attr('src', question.image);
@@ -103,6 +105,7 @@ const displayQuestions = (question) => {
     $('label[for=optionD]').html(question.optionD);
 }
 
+// Checks if radio selection is correct or not
 const checkValue = (array) => {
     const $answer = $('input[name=answers]:checked').siblings('label').html();
     const correct = array.correct;
@@ -115,16 +118,20 @@ const checkValue = (array) => {
     console.log(`Score: ${userScore}`);
 }
 
+// Initialize game with displaying first question in array
 displayQuestions(questions[0]);
 
+// Removes previous radio selection
 const $removeSelection = () => {
     $removeCheck = $('input[name=answers]:checked').prop('checked', false);
 }
 
+// Display score through DOM
 const $displayScore = (score) => {
     $('.score h2').eq(1).html(`${score}/10`);
 }
 
+// If game is over, remove all questions and show score
 const $gameCheck = () => {
     console.log('Game over');
     $('.img').remove();
@@ -133,6 +140,7 @@ const $gameCheck = () => {
     $displayScore(userScore);
 }
 
+// When button is clicked, game is being played
 $('button').click(function() {
     // const $answer = $('input[name=answers]:checked').siblings('label').html();
     checkValue(questions[questionTracker]);
