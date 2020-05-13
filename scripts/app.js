@@ -92,6 +92,99 @@ const questions = [
     }
 ];
 
+const lotrQuestions = [
+    {
+        question: 'Which book does Boromir die in?',
+        image: 'images/1-1.png',
+        optionA: 'A. The Fellowship of the Ring',
+        optionB: 'B. The Two Towers',
+        optionC: 'C. The Return of the King',
+        optionD: 'D. The Hobbit',
+        correct: 'B. The Two Towers'
+    },
+    {
+        question: 'Which of these is another name for dwarves?',
+        image: 'images/1-2.jpeg',
+        optionA: 'A. Luthien\'s Folk',
+        optionB: 'B. The Old Ones',
+        optionC: 'C. The Deep Ones',
+        optionD: 'D. Durin\'s Folk',
+        correct: 'D. Durin\'s Folk'
+    },
+    {
+        question: 'What is the name of Galadriel\'s husband?',
+        image: 'images/1-3.png',
+        optionA: 'A. Celebrian',
+        optionB: 'B. Celebrimbor',
+        optionC: 'C. Celeborn',
+        optionD: 'D. Celebrant',
+        correct: 'C. Celeborn'
+    },
+    {
+        question: 'After Sauron, who held the One Ring?',
+        image: 'images/1-4.png',
+        optionA: 'A. Elrond',
+        optionB: 'B. Isildur',
+        optionC: 'C. Gollum',
+        optionD: 'D. Frodo',
+        correct: 'B. Isildur'
+    },
+    {
+        question: 'Where is Legolas from?',
+        image: 'images/1-5.png',
+        optionA: 'A. Fangorn Forest',
+        optionB: 'B. Rivendell',
+        optionC: 'C. Lothlorian',
+        optionD: 'D. Mirkwood',
+        correct: 'D. Mirkwood'
+    },
+    {
+        question: 'What type of blade was Frodo stabbed with?',
+        image: 'images/1-6.png',
+        optionA: 'A. Morgul',
+        optionB: 'B. Mithril',
+        optionC: 'C. Mithrandir',
+        optionD: 'D. Mjolnir',
+        correct: 'A. Morgul'
+    },
+    {
+        question: 'How many Rings of Power were there?',
+        image: 'images/1-7.jpeg',
+        optionA: 'A. 5',
+        optionB: 'B. 9',
+        optionC: 'C. 13',
+        optionD: 'D. 20',
+        correct: 'D. 20'
+    },
+    {
+        question: 'What actor was originally cast as Aragorn?',
+        image: 'images/1-8.jpeg',
+        optionA: 'A. Christian Bale',
+        optionB: 'B. Stuart Townsend',
+        optionC: 'C. Brad Pitt',
+        optionD: 'D. David Schwimmer',
+        correct: 'B. Stuart Townsend'
+    },
+    {
+        question: 'Who became King of Rohan after Theoden died?',
+        image: 'images/1-9.jpg',
+        optionA: 'A. Eowyn',
+        optionB: 'B. Grima',
+        optionC: 'C. Aragorn',
+        optionD: 'D. Eomer',
+        correct: 'D. Eomer'
+    },
+    {
+        question: 'What causes Merry and Pippin to grow taller than other hobbits?',
+        image: 'images/1-10.png',
+        optionA: 'A. White Wizard\s spell',
+        optionB: 'B. Water in Fangorn',
+        optionC: 'C. They\'re Born That Way',
+        optionD: 'D. They\'re Not',
+        correct: 'B. Water in Fangorn'
+    }
+];
+
 let questionTracker = 0;
 let userScore = 0;
 
@@ -207,6 +300,7 @@ $('.score__replay').click(function() {
 // Return to launch screen
 $('.score__finish').click(function() {
     // $('.score').toggleClass('hidden');
+    $removeSelection();
     $('.quiz-container').toggleClass('hidden');
     $('.img').toggleClass('hidden');
     $('.questions').toggleClass('hidden');

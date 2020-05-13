@@ -54,3 +54,17 @@ Still consisting of a "home" screen that will show user score for that theme
 8. Who voices Birdperson?
 9. Who is the first to go in 'Total Rickall'?
 10. What is the only thing Rick cares about in the Vindicators?
+
+
+
+<!-- Lord of the Rings Questions -->
+1. Which book does Boromir die in?
+2. Which of these is another name for dwarves?
+3. What is the name of Galadriel's husband?
+4. After Sauron, who held the One Ring?
+5. Where is Legolas from?
+6. What type of blade was Frodo stabbed with?
+7. How many Rings of Power were there?
+8. What actor was originally cast as Aragorn?
+9. Who became King of Rohan after Theoden died?
+10. What causes Merry and Pippin to grow taller than other hobbits?
