@@ -92,7 +92,7 @@ const questions = [
 ];
 
 let questionTracker = 0;
-let score = 0;
+let userScore = 0;
 
 const displayQuestions = (question) => {
     $('.quiz-container h3').html(question.question);
@@ -103,33 +103,44 @@ const displayQuestions = (question) => {
     $('label[for=optionD]').html(question.optionD);
 }
 
-// array or obj to hold checkValue
-
 const checkValue = (array) => {
     const $answer = $('input[name=answers]:checked').siblings('label').html();
     const correct = array.correct;
     if (correct === $answer) {
-        score++;
+        userScore++;
         console.log('Correct');
     } else {
         console.log('Incorrect');
     }
-    console.log(`Score: ${score}`);
+    console.log(`Score: ${userScore}`);
 }
 
 displayQuestions(questions[0]);
 
 const $removeSelection = () => {
     $removeCheck = $('input[name=answers]:checked').prop('checked', false);
-    // console.log($removeCheck);
+}
+
+const $displayScore = (score) => {
+    $('.score h2').eq(1).html(`${score}/10`);
+}
+
+const $gameCheck = () => {
+    console.log('Game over');
+    $('.img').remove();
+    $('.questions').remove();
+    $('.score').css('display', 'block');
+    $displayScore(userScore);
 }
 
 $('button').click(function() {
-    // console.log('Clicked');
     // const $answer = $('input[name=answers]:checked').siblings('label').html();
-    // displayQuestions(question1);
     checkValue(questions[questionTracker]);
     questionTracker++;
-    displayQuestions(questions[questionTracker]);
-    $removeSelection();
+    if ( questionTracker == 10 ) {
+        $gameCheck();
+    } else {
+        $removeSelection();
+        displayQuestions(questions[questionTracker]);
+    }
 });

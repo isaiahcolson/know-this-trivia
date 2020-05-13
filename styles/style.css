@@ -58,9 +58,22 @@ label {
 h3 {
     font-family: var(--base-font);
     font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: .03em;
+    color: var(--dark);
+    margin: 0 0 20px 0;
+}
+
+h2 {
+    font-family: var(--base-font);
+    font-weight: 700;
     font-size: 1.8em;
     color: var(--dark);
     margin: 0 0 20px 0;
+}
+
+.score {
+    display: none;
 }
 
 button {
