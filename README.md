@@ -116,3 +116,19 @@ Still consisting of a "home" screen that will show user score for that theme
 8. What is Erin's first name?
 9. How much money does Michael donate to Oscar's nephew's charity?
 10. What is the preferred Pizza place among The Office staff?
+
+
+
+
+
+<!-- Disney Questions -->
+1. What is the name of the fictional city where Big Hero 6 takes place?
+2. What is the name of the little bear in \'Brother Bear\'?
+3. What sport was Chicken Little’s father famous for?
+4. What is the name of Cinderella’s step-mother?
+5. How many brothers does Hans have in the movie Frozen?
+6. In what year was the original Lady and the Tramp released?
+7. What does Lilo put in Stitch’s bottle in Lilo & Stitch?
+8. Who chooses Moana to return the heart?
+9. Mulan takes place in China during which dynasty?
+10. What kind of animal killed Tarzan’s real parents?

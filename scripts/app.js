@@ -1,4 +1,4 @@
-/* Rick & Morty questions */
+// Rick & Morty questions
 const ramQuestions = [
     {
         question: 'When did \'Rick and Morty\' first air?',
@@ -374,6 +374,7 @@ const bttfQuestions = [
     }
 ];
 
+// Office Questions
 const officeQuestions = [
     {
         question: 'What does Michael ask Pam to spread on his grilled foot?',
@@ -464,6 +465,100 @@ const officeQuestions = [
         optionC: 'C. Pizza by Alfredo',
         optionD: 'D. Alfredo\'s Pizza',
         correct: 'D. Alfredo\'s Pizza'
+    }
+];
+
+// Disney questions
+const disQuestions = [
+    {
+        question: 'What is the name of the fictional city where Big Hero 6 takes place?',
+        image: 'images/dis1.jpg',
+        optionA: 'A. San Fransokyo',
+        optionB: 'B. San Fransisco',
+        optionC: 'C. Tokyo',
+        optionD: 'D. Silicondon',
+        correct: 'A. San Fransokyo'
+    },
+    {
+        question: 'What is the name of the little bear in \'Brother Bear\'?',
+        image: 'images/dis2.jpg',
+        optionA: 'A. Cub',
+        optionB: 'B. Kodak',
+        optionC: 'C. Koda',
+        optionD: 'D. Kinau',
+        correct: 'C. Koda'
+    },
+    {
+        question: 'What sport was Chicken Little’s father famous for?',
+        image: 'images/dis3.jpg',
+        optionA: 'A. Dodgeball',
+        optionB: 'B. Baseball',
+        optionC: 'C. Basketball',
+        optionD: 'D. Track',
+        correct: 'B. Baseball'
+    },
+    {
+        question: 'What is the name of Cinderella’s stepmother?',
+        image: 'images/dis4.jpg',
+        optionA: 'A. Drizella',
+        optionB: 'B. Ana Beurdeu',
+        optionC: 'C. Lady Tremaine',
+        optionD: 'D. Miss Marney',
+        correct: 'C. Lady Tremaine'
+    },
+    {
+        question: 'How many brothers does Hans have in the movie Frozen??',
+        image: 'images/dis5.jpg',
+        optionA: 'A. 12',
+        optionB: 'B. 5',
+        optionC: 'C. 23',
+        optionD: 'D. 7',
+        correct: 'A. 12'
+    },
+    {
+        question: 'In what year was the original Lady and the Tramp released?',
+        image: 'images/dis6.jpg',
+        optionA: 'A. 1958',
+        optionB: 'B. 1961',
+        optionC: 'C. 1987',
+        optionD: 'D. 1955',
+        correct: 'D. 1955'
+    },
+    {
+        question: 'What does Lilo put in Stitch’s bottle in Lilo & Stitch?',
+        image: 'images/dis7.jpg',
+        optionA: 'A. Water',
+        optionB: 'B. Coffee',
+        optionC: 'C. Soda',
+        optionD: 'D. Energy Drink',
+        correct: 'B. Coffee'
+    },
+    {
+        question: 'Who chooses Moana to return the heart?',
+        image: 'images/dis8.jpeg',
+        optionA: 'A. Her Father',
+        optionB: 'B. Her Grandmother',
+        optionC: 'C. Maui',
+        optionD: 'D. The Ocean',
+        correct: 'D. The Ocean'
+    },
+    {
+        question: 'Mulan takes place in China during which dynasty?',
+        image: 'images/dis9.jpeg',
+        optionA: 'A. Zhou Dynasty',
+        optionB: 'B. Sui Dynasty',
+        optionC: 'C. Han Dynasty',
+        optionD: 'D. Shang Dynasty',
+        correct: 'C. Han Dynasty'
+    },
+    {
+        question: 'What kind of animal killed Tarzan’s real parents?',
+        image: 'images/dis10.jpg',
+        optionA: 'A. Tiger',
+        optionB: 'B. Leopard',
+        optionC: 'C. Gorilla',
+        optionD: 'D. Snake',
+        correct: 'B. Leopard'
     }
 ];
 
@@ -825,6 +920,63 @@ $('.office__finish').click(function() {
     $('.questions').toggleClass('hidden');
     $('.office__replay').toggleClass('hidden');
     $('.office__finish').toggleClass('hidden');
+    $('.score').toggleClass('hidden');
+    $('.launch').toggleClass('hidden');
+});
+
+
+
+/* Disney Buttons */
+// Initialize Disney trivia game
+$('.dis').click(function() {
+    $('.quiz-container').toggleClass('hidden');
+    displayQuestions(disQuestions[0]);
+    $('.launch').toggleClass('hidden');
+    $('.dis__button').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+});
+
+// Disney button to verify answers in game
+$('.dis__button').click(function() {
+    // const $answer = $('input[name=answers]:checked').siblings('label').html();
+    checkValue(disQuestions[questionTracker]);
+    questionTracker++;
+    if ( questionTracker == 10 ) {
+        $gameCheck();
+        $('.dis__button').toggleClass('hidden');
+        $('.dis__replay').toggleClass('hidden');
+        $('.dis__finish').toggleClass('hidden');
+    } else {
+        $removeSelection();
+        displayQuestions(disQuestions[questionTracker]);
+    }
+});
+
+// Replay Disney match
+$('.dis__replay').click(function() {
+    $('.score').toggleClass('hidden');
+    $('.dis__button').toggleClass('hidden');
+    // $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.dis__replay').toggleClass('hidden');
+    $('.dis__finish').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+    displayQuestions(disQuestions[0]);
+    $removeSelection();
+});
+
+// Return to launch screen from Disney game
+$('.dis__finish').click(function() {
+    // $('.score').toggleClass('hidden');
+    $removeSelection();
+    $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.dis__replay').toggleClass('hidden');
+    $('.dis__finish').toggleClass('hidden');
     $('.score').toggleClass('hidden');
     $('.launch').toggleClass('hidden');
 });
