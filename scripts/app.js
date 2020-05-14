@@ -280,6 +280,100 @@ const marvQuestions = [
     }
 ];
 
+// BTTF Questions
+const bttfQuestions = [
+    {
+        question: 'What is the mall that Marty goes to when returning from 1955?',
+        image: 'images/bttf1.jpg',
+        optionA: 'A. Twin Pines Mall',
+        optionB: 'B. Lone Pine Mall',
+        optionC: 'C. Battlefield Mall',
+        optionD: 'D. Mall of America',
+        correct: 'B. Lone Pine Mall'
+    },
+    {
+        question: 'Who was the president in 1955?',
+        image: 'images/bttf2.jpg',
+        optionA: 'A. John F. Kennedy',
+        optionB: 'B. Jimmy Carter',
+        optionC: 'C. Ronald Reagen',
+        optionD: 'D. Dwight D. Eisenhower',
+        correct: 'D. Dwight D. Eisenhower'
+    },
+    {
+        question: 'What game did Biff hear on the radio when driving to the dance?',
+        image: 'images/bttf3.jpg',
+        optionA: 'A. Michigan-Iowa',
+        optionB: 'B. Oklahoma-Nebraska',
+        optionC: 'C. UCLA-Washington',
+        optionD: 'D. Notre Dame-USC',
+        correct: 'C. UCLA-Washington'
+    },
+    {
+        question: 'Who was to visit Washington when Marty goes to 2015?',
+        image: 'images/bttf4.jpg',
+        optionA: 'A. George Lucas',
+        optionB: 'B. Queen Diana',
+        optionC: 'C. Ronald Reagen',
+        optionD: 'D. Steven Spielberg',
+        correct: 'B. Queen Diana'
+    },
+    {
+        question: 'Who cameoed as the judge that called Marty\'s band \"too darn loud\"?',
+        image: 'images/bttf5.png',
+        optionA: 'A. Huey Lewis',
+        optionB: 'B. Steven Spielberg',
+        optionC: 'C. Eddie Van Halen',
+        optionD: 'D. Bob Geldof',
+        correct: 'A. Huey Lewis'
+    },
+    {
+        question: 'What time does lightning hit the clock tower?',
+        image: 'images/bttf6.jpg',
+        optionA: 'A. 10:04 p.m.',
+        optionB: 'B. 9:56 p.m.',
+        optionC: 'C. 10:15 a.m.',
+        optionD: 'D. 12:03 a.m.',
+        correct: 'A. 10:04 p.m.'
+    },
+    {
+        question: 'Who directed the Back to the Future trilogy?',
+        image: 'images/bttf7.jpg',
+        optionA: 'A. George Lucas',
+        optionB: 'B. Steven Spielberg',
+        optionC: 'C. Robert Zemeckis',
+        optionD: 'D. Ron Howard',
+        correct: 'C. Robert Zemeckis'
+    },
+    {
+        question: 'What was one of the instructions on the Flux Capacitor?',
+        image: 'images/bttf8.jpg',
+        optionA: 'A. Caution!',
+        optionB: 'B. Shield Eyes From Light',
+        optionC: 'C. Danger - Fluxing!',
+        optionD: 'D. Refuel When Empty',
+        correct: 'B. Shield Eyes From Light'
+    },
+    {
+        question: 'What is the name of Doc\'s dog in 1955?',
+        image: 'images/bttf9.jpg',
+        optionA: 'A. Einstein',
+        optionB: 'B. Marty',
+        optionC: 'C. Edison',
+        optionD: 'D. Copernicus',
+        correct: 'D. Copernicus'
+    },
+    {
+        question: 'Which young actor made his film debut in Back to the Future II?',
+        image: 'images/bttf10.png',
+        optionA: 'A. Elijah Wood',
+        optionB: 'B. Sean Astin',
+        optionC: 'C. Corey Feldman',
+        optionD: 'D. Fred Savage',
+        correct: 'A. Elijah Wood'
+    }
+];
+
 let questionTracker = 0;
 let userScore = 0;
 
@@ -417,7 +511,6 @@ $('.ram__finish').click(function() {
 
 
 /* LOTR Buttons */
-
 // Initialize LOTR trivia game
 $('.lotr').click(function() {
     $('.quiz-container').toggleClass('hidden');
@@ -475,7 +568,6 @@ $('.lotr__finish').click(function() {
 
 
 /* Marv Buttons */
-
 // Initialize Marv trivia game
 $('.marv').click(function() {
     $('.quiz-container').toggleClass('hidden');
@@ -526,6 +618,63 @@ $('.marv__finish').click(function() {
     $('.questions').toggleClass('hidden');
     $('.marv__replay').toggleClass('hidden');
     $('.marv__finish').toggleClass('hidden');
+    $('.score').toggleClass('hidden');
+    $('.launch').toggleClass('hidden');
+});
+
+
+
+/* BTTF Buttons */
+// Initialize Rick and Morty trivia game
+$('.bttf').click(function() {
+    $('.quiz-container').toggleClass('hidden');
+    displayQuestions(bttfQuestions[0]);
+    $('.launch').toggleClass('hidden');
+    $('.bttf__button').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+});
+
+// Rick and Morty button to verify answers in game
+$('.bttf__button').click(function() {
+    // const $answer = $('input[name=answers]:checked').siblings('label').html();
+    checkValue(bttfQuestions[questionTracker]);
+    questionTracker++;
+    if ( questionTracker == 10 ) {
+        $gameCheck();
+        $('.bttf__button').toggleClass('hidden');
+        $('.bttf__replay').toggleClass('hidden');
+        $('.bttf__finish').toggleClass('hidden');
+    } else {
+        $removeSelection();
+        displayQuestions(bttfQuestions[questionTracker]);
+    }
+});
+
+// Replay Rick and Morty match
+$('.bttf__replay').click(function() {
+    $('.score').toggleClass('hidden');
+    $('.bttf__button').toggleClass('hidden');
+    // $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.bttf__replay').toggleClass('hidden');
+    $('.bttf__finish').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+    displayQuestions(bttfQuestions[0]);
+    $removeSelection();
+});
+
+// Return to launch screen from Rick and Morty game
+$('.bttf__finish').click(function() {
+    // $('.score').toggleClass('hidden');
+    $removeSelection();
+    $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.bttf__replay').toggleClass('hidden');
+    $('.bttf__finish').toggleClass('hidden');
     $('.score').toggleClass('hidden');
     $('.launch').toggleClass('hidden');
 });

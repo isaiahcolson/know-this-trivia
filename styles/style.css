@@ -72,9 +72,9 @@ body {
     background-image: url("../images/lotrthumb.png");
 } */
 
-/* .bttf {
-    background-image: url("../images/lotrthumb.png");
-} */
+.bttf {
+    background-image: url("../images/bttfthumb.jpeg");
+}
 
 .grid__item img:hover {
     opacity: 0;

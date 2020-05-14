@@ -84,3 +84,19 @@ Still consisting of a "home" screen that will show user score for that theme
 8. What is Pepper Pott\'s first name?
 9. How much credit did Tony give Pepper for Stark Tower?
 10. Which Infinity Stone does Thanos get first?
+
+
+
+
+
+<!-- Back to the Future Questions -->
+1. What is the mall that Marty goes to when returning from 1955?
+2. Who was the president in 1955?
+3. What game did Biff hear on the radio when driving to the dance?
+4. Who was to visit Washington when Marty goes to 2015?
+5. Who cameoed as the judge that called Marty\'s band \"too darn loud\"?
+6. What time does lightning hit the clock tower?
+7. Who directed the Back to the Future trilogy?
+8. What was one of the instructions on the Flux Capacitor?
+9. What is the name of Doc\'s dog?
+10. Which young actor made his film debut in Back to the Future II?
