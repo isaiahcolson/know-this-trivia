@@ -374,6 +374,99 @@ const bttfQuestions = [
     }
 ];
 
+const officeQuestions = [
+    {
+        question: 'What does Michael ask Pam to spread on his grilled foot?',
+        image: 'images/office1.png',
+        optionA: 'A. Burn Cream',
+        optionB: 'B. Butter',
+        optionC: 'C. Peanut Butter',
+        optionD: 'D. Mayo',
+        correct: 'B. Butter'
+    },
+    {
+        question: 'What did Michael say everyone called Phyllis back in high school?',
+        image: 'images/office2.jpg',
+        optionA: 'A. Less-Urban Aunt Jemima',
+        optionB: 'B. Easy Rider',
+        optionC: 'C. Phyll',
+        optionD: 'D. Crappin\' Lapin',
+        correct: 'B. Easy Rider'
+    },
+    {
+        question: 'What\'s Stanley\'s morning 3 by 5?',
+        image: 'images/office3.jpg',
+        optionA: 'A. Coffe, 3 Cream, 5 Sugar',
+        optionB: 'B. Iced Tea, 3 Sugar, 5 Cream',
+        optionC: 'C. Coffee, 3 Sugar, 5 Cream',
+        optionD: 'D. 3 Bagels, 5 Min. Nap',
+        correct: 'B. Iced Tea, 3 Sugar, 5 Cream'
+    },
+    {
+        question: 'What does Michael eat instead of ice cream when they don\'t have any?',
+        image: 'images/office4.jpg',
+        optionA: 'A. Sour Cream',
+        optionB: 'B. Mayo and Chocolate Chips',
+        optionC: 'C. Mayo and Black Olives',
+        optionD: 'D. Cereal',
+        correct: 'C. Mayo and Black Olives'
+    },
+    {
+        question: 'What is the scaries animarl Dwight and Robert California\'s son agree on?',
+        image: 'images/office5.jpg',
+        optionA: 'A. Box Jellyfish',
+        optionB: 'B. Bear',
+        optionC: 'C. Black Bear',
+        optionD: 'D. Shark',
+        correct: 'A. Box Jellyfish'
+    },
+    {
+        question: 'What radio station stickers are seen around the office?',
+        image: 'images/office6.jpg',
+        optionA: 'A. Ira & The Douche',
+        optionB: 'B. Froggy 901',
+        optionC: 'C. Froggy 101',
+        optionD: 'D. Dr. Ira Glass',
+        correct: 'C. Froggy 101'
+    },
+    {
+        question: 'What is Michael and Jan\'s safe word if things go too far?',
+        image: 'images/office7.jpg',
+        optionA: 'A. Bonfire',
+        optionB: 'B. Candle',
+        optionC: 'C. Candles',
+        optionD: 'D. Foliage',
+        correct: 'D. Foliage'
+    },
+    {
+        question: 'What is Erin\'s first name?',
+        image: 'images/office8.jpeg',
+        optionA: 'A. Kelly',
+        optionB: 'B. Erin',
+        optionC: 'C. Margaret',
+        optionD: 'D. Kevin',
+        correct: 'A. Kelly'
+    },
+    {
+        question: 'How much money does Michael donate to Oscar\'s nephew\'s charity?',
+        image: 'images/office9.png',
+        optionA: 'A. $40',
+        optionB: 'B. $10',
+        optionC: 'C. $25',
+        optionD: 'D. $100',
+        correct: 'C. $25'
+    },
+    {
+        question: 'What is the preferred Pizza place among The Office staff?',
+        image: 'images/office10.jpg',
+        optionA: 'A. Domino\'s',
+        optionB: 'B. Pizza Hut',
+        optionC: 'C. Pizza by Alfredo',
+        optionD: 'D. Alfredo\'s Pizza',
+        correct: 'D. Alfredo\'s Pizza'
+    }
+];
+
 let questionTracker = 0;
 let userScore = 0;
 
@@ -625,7 +718,7 @@ $('.marv__finish').click(function() {
 
 
 /* BTTF Buttons */
-// Initialize Rick and Morty trivia game
+// Initialize BTTF trivia game
 $('.bttf').click(function() {
     $('.quiz-container').toggleClass('hidden');
     displayQuestions(bttfQuestions[0]);
@@ -635,7 +728,7 @@ $('.bttf').click(function() {
     userScore = 0;
 });
 
-// Rick and Morty button to verify answers in game
+// BTTF button to verify answers in game
 $('.bttf__button').click(function() {
     // const $answer = $('input[name=answers]:checked').siblings('label').html();
     checkValue(bttfQuestions[questionTracker]);
@@ -651,7 +744,7 @@ $('.bttf__button').click(function() {
     }
 });
 
-// Replay Rick and Morty match
+// Replay BTTF match
 $('.bttf__replay').click(function() {
     $('.score').toggleClass('hidden');
     $('.bttf__button').toggleClass('hidden');
@@ -666,7 +759,7 @@ $('.bttf__replay').click(function() {
     $removeSelection();
 });
 
-// Return to launch screen from Rick and Morty game
+// Return to launch screen from BTTF game
 $('.bttf__finish').click(function() {
     // $('.score').toggleClass('hidden');
     $removeSelection();
@@ -675,6 +768,63 @@ $('.bttf__finish').click(function() {
     $('.questions').toggleClass('hidden');
     $('.bttf__replay').toggleClass('hidden');
     $('.bttf__finish').toggleClass('hidden');
+    $('.score').toggleClass('hidden');
+    $('.launch').toggleClass('hidden');
+});
+
+
+
+/* The Office Buttons */
+// Initialize The Office trivia game
+$('.office').click(function() {
+    $('.quiz-container').toggleClass('hidden');
+    displayQuestions(officeQuestions[0]);
+    $('.launch').toggleClass('hidden');
+    $('.office__button').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+});
+
+// The Office button to verify answers in game
+$('.office__button').click(function() {
+    // const $answer = $('input[name=answers]:checked').siblings('label').html();
+    checkValue(officeQuestions[questionTracker]);
+    questionTracker++;
+    if ( questionTracker == 10 ) {
+        $gameCheck();
+        $('.office__button').toggleClass('hidden');
+        $('.office__replay').toggleClass('hidden');
+        $('.office__finish').toggleClass('hidden');
+    } else {
+        $removeSelection();
+        displayQuestions(officeQuestions[questionTracker]);
+    }
+});
+
+// Replay The Office match
+$('.office__replay').click(function() {
+    $('.score').toggleClass('hidden');
+    $('.office__button').toggleClass('hidden');
+    // $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.office__replay').toggleClass('hidden');
+    $('.office__finish').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+    displayQuestions(officeQuestions[0]);
+    $removeSelection();
+});
+
+// Return to launch screen from The Office game
+$('.office__finish').click(function() {
+    // $('.score').toggleClass('hidden');
+    $removeSelection();
+    $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.office__replay').toggleClass('hidden');
+    $('.office__finish').toggleClass('hidden');
     $('.score').toggleClass('hidden');
     $('.launch').toggleClass('hidden');
 });

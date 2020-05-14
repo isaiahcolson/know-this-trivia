@@ -100,3 +100,19 @@ Still consisting of a "home" screen that will show user score for that theme
 8. What was one of the instructions on the Flux Capacitor?
 9. What is the name of Doc\'s dog?
 10. Which young actor made his film debut in Back to the Future II?
+
+
+
+
+
+<!-- The Office Questions -->
+1. What does Michael ask Pam to spread on his burnt foot?
+2. What did Michael say everyone called Phyllis back in high school?
+3. What's Stanley's morning 3 by 5?
+4. What does Michael eat instead of ice cream when they don't have any?
+5. What is the scaries animarl Dwight and Robert California's son agree on?
+6. What radio station stickers are seen around the office?
+7. What is Michael and Jan's safe word if things go too far?
+8. What is Erin's first name?
+9. How much money does Michael donate to Oscar's nephew's charity?
+10. What is the preferred Pizza place among The Office staff?
