@@ -129,9 +129,37 @@ h1 {
     transition: .25s ease;
 }
 
-/* .ram:hover ~ .bg {
+.ram:hover ~ .bg {
     background-image: url(../images/ramlaunchbg.png);
-} */
+}
+
+.lotr:hover ~ .bg {
+    background-image: url(../images/lotrlaunchbg.png);
+}
+
+.sthings:hover ~ .bg {
+    background-image: url(../images/sthingslaunchbg.png);
+}
+
+.dis:hover ~ .bg {
+    background-image: url(../images/dislaunchbg.png);
+}
+
+.marv:hover ~ .bg {
+    background-image: url(../images/marvlaunchbg.png);
+}
+
+.swars:hover ~ .bg {
+    background-image: url(../images/swarslaunchbg.png);
+}
+
+.office:hover ~ .bg {
+    background-image: url(../images/officelaunchbg.png);
+}
+
+.bttf:hover ~ .bg {
+    background-image: url(../images/bttflaunchbg.png);
+}
 
 .questions {
     margin: 0 40px 0 40px;
