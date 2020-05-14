@@ -68,3 +68,19 @@ Still consisting of a "home" screen that will show user score for that theme
 8. What actor was originally cast as Aragorn?
 9. Who became King of Rohan after Theoden died?
 10. What causes Merry and Pippin to grow taller than other hobbits?
+
+
+
+
+
+<!-- Marvel Questions -->
+1. Which is not a word to activate the winter soldier?
+2. How many possibilities did Doctor Strange see in \'Infinity War\'?
+3. Who killed T\'Challa\'s father?
+4. Who voices Groot?
+5. What was Wanda Maximoff’s brother’s first name?
+6. Who did the Sovereign create?
+7. What show has cameo appearances in Russo brother\'s movies?
+8. What is Pepper Pott\'s first name?
+9. How much credit did Tony give Pepper for Stark Tower?
+10. Which Infinity Stone does Thanos get first?

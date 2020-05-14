@@ -151,9 +151,9 @@ const lotrQuestions = [
     {
         question: 'How many Rings of Power were there?',
         image: 'images/lotr7.jpg',
-        optionA: 'A. 5',
-        optionB: 'B. 9',
-        optionC: 'C. 13',
+        optionA: 'A. 1',
+        optionB: 'B. 15',
+        optionC: 'C. 18',
         optionD: 'D. 20',
         correct: 'D. 20'
     },
@@ -183,6 +183,100 @@ const lotrQuestions = [
         optionC: 'C. They\'re Born That Way',
         optionD: 'D. They\'re Not',
         correct: 'B. Water in Fangorn'
+    }
+];
+
+// Marv Questions
+const marvQuestions = [
+    {
+        question: 'Which is not a word to activate the winter soldier?',
+        image: 'images/marv1.png',
+        optionA: 'A. Furnace',
+        optionB: 'B. Benign',
+        optionC: 'C. Two',
+        optionD: 'D. Rusted',
+        correct: 'C. Two'
+    },
+    {
+        question: 'How many possibilities did Doctor Strange see in \'Infinity War\'?',
+        image: 'images/marv2.jpg',
+        optionA: 'A. 14,000,605',
+        optionB: 'B. 12',
+        optionC: 'C. 15,340,207',
+        optionD: 'D. 4,507,807',
+        correct: 'A. 14,000,605'
+    },
+    {
+        question: 'Who killed T\'Challa\'s father?',
+        image: 'images/marv3.jpg',
+        optionA: 'A. Winter Soldier',
+        optionB: 'B. Zemo',
+        optionC: 'C. Killmonger',
+        optionD: 'D. T\'Challa',
+        correct: 'B. Zemo'
+    },
+    {
+        question: 'Who voices Groot?',
+        image: 'images/marv4.jpg',
+        optionA: 'A. Vin Diesel',
+        optionB: 'B. Bradley Cooper',
+        optionC: 'C. Sean Gunn',
+        optionD: 'D. Chris Pratt',
+        correct: 'A. Vin Diesel'
+    },
+    {
+        question: 'What was Wanda Maximoff’s brother’s first name?',
+        image: 'images/marv5.jpg',
+        optionA: 'A. Flash',
+        optionB: 'B. Quicksilver',
+        optionC: 'C. Pietro',
+        optionD: 'D. Paul',
+        correct: 'C. Pietro'
+    },
+    {
+        question: 'Who did the Sovereign create?',
+        image: 'images/marv6.jpg',
+        optionA: 'A. The Destroyer',
+        optionB: 'B. Adam Warlock',
+        optionC: 'C. Maximoff Twins',
+        optionD: 'D. Howard the Duck',
+        correct: 'B. Adam Warlock'
+    },
+    {
+        question: 'What show has cameo appearances in Russo brother\'s movies?',
+        image: 'images/marv7.jpg',
+        optionA: 'A. Community',
+        optionB: 'B. Daredevil',
+        optionC: 'C. Arrested Development',
+        optionD: 'D. Star Trek',
+        correct: 'C. Arrested Development'
+    },
+    {
+        question: 'What is Pepper Pott\'s first name?',
+        image: 'images/marv8.jpg',
+        optionA: 'A. Pepper',
+        optionB: 'B. Martha',
+        optionC: 'C. Valeria',
+        optionD: 'D. Patricia',
+        correct: 'D. Patricia'
+    },
+    {
+        question: 'How much credit did Tony give Pepper for Stark Tower?',
+        image: 'images/marv9.jpg',
+        optionA: 'A. 1%',
+        optionB: 'B. 5%',
+        optionC: 'C. 10%',
+        optionD: 'D. 12%',
+        correct: 'D. 12%'
+    },
+    {
+        question: 'Which Infinity Stone does Thanos get first?',
+        image: 'images/marv10.jpg',
+        optionA: 'A. Power',
+        optionB: 'B. Space',
+        optionC: 'C. Reality',
+        optionD: 'D. Mind',
+        correct: 'A. Power'
     }
 ];
 
@@ -263,22 +357,15 @@ const $gameCheck = () => {
 
 /* Button event listeners */
 
+
+
+/* Rick and Morty Buttons */
 // Initialize Rick and Morty trivia game
 $('.ram').click(function() {
     $('.quiz-container').toggleClass('hidden');
     displayQuestions(ramQuestions[0]);
     $('.launch').toggleClass('hidden');
     $('.ram__button').toggleClass('hidden');
-    questionTracker = 0;
-    userScore = 0;
-});
-
-// Initialize LOTR trivia game
-$('.lotr').click(function() {
-    $('.quiz-container').toggleClass('hidden');
-    displayQuestions(lotrQuestions[0]);
-    $('.launch').toggleClass('hidden');
-    $('.lotr__button').toggleClass('hidden');
     questionTracker = 0;
     userScore = 0;
 });
@@ -299,6 +386,48 @@ $('.ram__button').click(function() {
     }
 });
 
+// Replay Rick and Morty match
+$('.ram__replay').click(function() {
+    $('.score').toggleClass('hidden');
+    $('.ram__button').toggleClass('hidden');
+    // $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.ram__replay').toggleClass('hidden');
+    $('.ram__finish').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+    displayQuestions(ramQuestions[0]);
+    $removeSelection();
+});
+
+// Return to launch screen from Rick and Morty game
+$('.ram__finish').click(function() {
+    // $('.score').toggleClass('hidden');
+    $removeSelection();
+    $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.ram__replay').toggleClass('hidden');
+    $('.ram__finish').toggleClass('hidden');
+    $('.score').toggleClass('hidden');
+    $('.launch').toggleClass('hidden');
+});
+
+
+
+/* LOTR Buttons */
+
+// Initialize LOTR trivia game
+$('.lotr').click(function() {
+    $('.quiz-container').toggleClass('hidden');
+    displayQuestions(lotrQuestions[0]);
+    $('.launch').toggleClass('hidden');
+    $('.lotr__button').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+});
+
 // LOTR button to verify answers in game
 $('.lotr__button').click(function() {
     // const $answer = $('input[name=answers]:checked').siblings('label').html();
@@ -313,21 +442,6 @@ $('.lotr__button').click(function() {
         $removeSelection();
         displayQuestions(lotrQuestions[questionTracker]);
     }
-});
-
-// Replay Rick and Morty match
-$('.ram__replay').click(function() {
-    $('.score').toggleClass('hidden');
-    $('.ram__button').toggleClass('hidden');
-    // $('.quiz-container').toggleClass('hidden');
-    $('.img').toggleClass('hidden');
-    $('.questions').toggleClass('hidden');
-    $('.ram__replay').toggleClass('hidden');
-    $('.ram__finish').toggleClass('hidden');
-    questionTracker = 0;
-    userScore = 0;
-    displayQuestions(ramQuestions[0]);
-    $removeSelection();
 });
 
 // Replay LOTR match
@@ -345,19 +459,6 @@ $('.lotr__replay').click(function() {
     $removeSelection();
 });
 
-// Return to launch screen from Rick and Morty game
-$('.ram__finish').click(function() {
-    // $('.score').toggleClass('hidden');
-    $removeSelection();
-    $('.quiz-container').toggleClass('hidden');
-    $('.img').toggleClass('hidden');
-    $('.questions').toggleClass('hidden');
-    $('.ram__replay').toggleClass('hidden');
-    $('.ram__finish').toggleClass('hidden');
-    $('.score').toggleClass('hidden');
-    $('.launch').toggleClass('hidden');
-});
-
 // Return to launch screen from LOTR game
 $('.lotr__finish').click(function() {
     // $('.score').toggleClass('hidden');
@@ -367,6 +468,64 @@ $('.lotr__finish').click(function() {
     $('.questions').toggleClass('hidden');
     $('.lotr__replay').toggleClass('hidden');
     $('.lotr__finish').toggleClass('hidden');
+    $('.score').toggleClass('hidden');
+    $('.launch').toggleClass('hidden');
+});
+
+
+
+/* Marv Buttons */
+
+// Initialize Marv trivia game
+$('.marv').click(function() {
+    $('.quiz-container').toggleClass('hidden');
+    displayQuestions(marvQuestions[0]);
+    $('.launch').toggleClass('hidden');
+    $('.marv__button').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+});
+
+// Marv button to verify answers in game
+$('.marv__button').click(function() {
+    // const $answer = $('input[name=answers]:checked').siblings('label').html();
+    checkValue(marvQuestions[questionTracker]);
+    questionTracker++;
+    if ( questionTracker == 10 ) {
+        $gameCheck();
+        $('.marv__button').toggleClass('hidden');
+        $('.marv__replay').toggleClass('hidden');
+        $('.marv__finish').toggleClass('hidden');
+    } else {
+        $removeSelection();
+        displayQuestions(marvQuestions[questionTracker]);
+    }
+});
+
+// Replay Marv match
+$('.marv__replay').click(function() {
+    $('.score').toggleClass('hidden');
+    $('.marv__button').toggleClass('hidden');
+    // $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.marv__replay').toggleClass('hidden');
+    $('.marv__finish').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+    displayQuestions(marvQuestions[0]);
+    $removeSelection();
+});
+
+// Return to launch screen from Marv game
+$('.marv__finish').click(function() {
+    // $('.score').toggleClass('hidden');
+    $removeSelection();
+    $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.marv__replay').toggleClass('hidden');
+    $('.marv__finish').toggleClass('hidden');
     $('.score').toggleClass('hidden');
     $('.launch').toggleClass('hidden');
 });
