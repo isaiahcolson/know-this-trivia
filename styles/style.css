@@ -64,9 +64,9 @@ body {
     background-image: url("../images/marvthumb.jpg");
 }
 
-/* .swars {
-    background-image: url("../images/lotrthumb.png");
-} */
+.swars {
+    background-image: url("../images/swarsthumb.jpg");
+}
 
 .office {
     background-image: url("../images/officethumb.jpg");

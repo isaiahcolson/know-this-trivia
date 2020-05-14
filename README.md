@@ -115,8 +115,6 @@ Still consisting of a "home" screen that will show user score for that theme
 9. Mulan takes place in China during which dynasty?
 10. What kind of animal killed Tarzan’s real parents?
 
-
-
 <!-- Stranger Things Questions -->
 1. In what year does season one take place?
 2. What was the show originally called?
@@ -128,3 +126,17 @@ Still consisting of a "home" screen that will show user score for that theme
 8. What is the true name for the Upside Down?
 9. In which city does Eleven meet up with Kali?
 10. What film were the child actors required to watch to prepare for their parts?
+
+
+
+<!-- Star Wars Questions -->
+1. Jedi Council consists of how many members?
+2. Who has not had an appearance in a Star Wars film or movie?
+3. What kind of trooper is introduced at the beginning of Rogue One?
+4. Who was the last one to jump down the Death Star’s garbage chute?
+5. Which actress starred as Queen Amidala’s decoy and hand-maiden Sabè?
+6. Where were Luke and Leia born?
+7. The planet Kashyyyk is home to who?
+8. Who is the leader of the swoop-riding pirates known as the Cloud-Riders?
+9. What is known as the hidden world of the Sith?
+10. Who voices IG-11 in the Mandalorian?

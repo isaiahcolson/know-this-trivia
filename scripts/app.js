@@ -656,6 +656,100 @@ const sthingsQuestions = [
     }
 ];
 
+// swars Questions
+const swarsQuestions = [
+    {
+        question: 'The Jedi Council consists of how many members?',
+        image: 'images/swars1.jpg',
+        optionA: 'A. 7',
+        optionB: 'B. 12',
+        optionC: 'C. 9',
+        optionD: 'D. 15',
+        correct: 'B. 12'
+    },
+    {
+        question: 'Who has not had an appearance in a Star Wars film or show?',
+        image: 'images/swars2.jpg',
+        optionA: 'A. Daniel Craig',
+        optionB: 'B. Bill Hader',
+        optionC: 'C. Stellan Skarsgard',
+        optionD: 'D. Ed Sheeran',
+        correct: 'C. Stellan Skarsgard'
+    },
+    {
+        question: 'What kind of trooper is introduced at the beginning of Rogue One?',
+        image: 'images/swars3.jpeg',
+        optionA: 'A. Shadow Trooper',
+        optionB: 'B. Dark Trooper',
+        optionC: 'C. Storm Trooper',
+        optionD: 'D. Death Trooper',
+        correct: 'D. Death Trooper'
+    },
+    {
+        question: 'Who was the last one to jump down the Death Star’s garbage chute?',
+        image: 'images/swars4.jpg',
+        optionA: 'A. Luke',
+        optionB: 'B. Leia',
+        optionC: 'C. Han',
+        optionD: 'D. C-3PO',
+        correct: 'C. Han'
+    },
+    {
+        question: 'Which actress starred as Queen Amidala’s decoy and hand-maiden Sabè?',
+        image: 'images/swars5.jpg',
+        optionA: 'A. Kiera Knightley',
+        optionB: 'B. Sofia Coppola',
+        optionC: 'C. Rose Byrne',
+        optionD: 'D. Jodie Comer',
+        correct: 'A. Kiera Knightley'
+    },
+    {
+        question: 'Where were Luke and Leia born?',
+        image: 'images/swars6.jpg',
+        optionA: 'A. Haruun Kal',
+        optionB: 'B. Mon Calamari',
+        optionC: 'C. Tatooine',
+        optionD: 'D. Polis Massa',
+        correct: 'D. Polis Massa'
+    },
+    {
+        question: 'The planet Kashyyyk is home to who?',
+        image: 'images/swars7.jpg',
+        optionA: 'A. The Clones',
+        optionB: 'B. Wookies',
+        optionC: 'C. Yoda',
+        optionD: 'D. Jabba the Hutt',
+        correct: 'B. Wookies'
+    },
+    {
+        question: 'Who is the leader of the swoop-riding pirates known as the Cloud-Riders?',
+        image: 'images/swars8.jpeg',
+        optionA: 'A. Torra Doza',
+        optionB: 'B. Baze Malbus',
+        optionC: 'C. Enfys Nest',
+        optionD: 'D. Jaro Tapal',
+        correct: 'C. Enfys Nest'
+    },
+    {
+        question: 'What is known as the hidden world of the Sith?',
+        image: 'images/swars9.jpeg',
+        optionA: 'A. Exegol',
+        optionB: 'B. Ryloth',
+        optionC: 'C. Moraband',
+        optionD: 'D. Onderon',
+        correct: 'A. Exegol'
+    },
+    {
+        question: 'Who voices IG-11 in the Mandalorian?',
+        image: 'images/swars10.jpg',
+        optionA: 'A. Taika Waititi',
+        optionB: 'B. Jon Favreau',
+        optionC: 'C. Adam Driver',
+        optionD: 'D. Ben Schwartz',
+        correct: 'A. Taika Waititi'
+    }
+];
+
 let questionTracker = 0;
 let userScore = 0;
 
@@ -1128,6 +1222,63 @@ $('.sthings__finish').click(function() {
     $('.questions').toggleClass('hidden');
     $('.sthings__replay').toggleClass('hidden');
     $('.sthings__finish').toggleClass('hidden');
+    $('.score').toggleClass('hidden');
+    $('.launch').toggleClass('hidden');
+});
+
+
+
+/* swars Buttons */
+// Initialize swars trivia game
+$('.swars').click(function() {
+    $('.quiz-container').toggleClass('hidden');
+    displayQuestions(swarsQuestions[0]);
+    $('.launch').toggleClass('hidden');
+    $('.swars__button').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+});
+
+// swars button to verify answers in game
+$('.swars__button').click(function() {
+    // const $answer = $('input[name=answers]:checked').siblings('label').html();
+    checkValue(swarsQuestions[questionTracker]);
+    questionTracker++;
+    if ( questionTracker == 10 ) {
+        $gameCheck();
+        $('.swars__button').toggleClass('hidden');
+        $('.swars__replay').toggleClass('hidden');
+        $('.swars__finish').toggleClass('hidden');
+    } else {
+        $removeSelection();
+        displayQuestions(swarsQuestions[questionTracker]);
+    }
+});
+
+// Replay swars match
+$('.swars__replay').click(function() {
+    $('.score').toggleClass('hidden');
+    $('.swars__button').toggleClass('hidden');
+    // $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.swars__replay').toggleClass('hidden');
+    $('.swars__finish').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+    displayQuestions(swarsQuestions[0]);
+    $removeSelection();
+});
+
+// Return to launch screen from swars game
+$('.swars__finish').click(function() {
+    // $('.score').toggleClass('hidden');
+    $removeSelection();
+    $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.swars__replay').toggleClass('hidden');
+    $('.swars__finish').toggleClass('hidden');
     $('.score').toggleClass('hidden');
     $('.launch').toggleClass('hidden');
 });
