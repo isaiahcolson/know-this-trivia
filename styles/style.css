@@ -52,9 +52,9 @@ body {
     background-image: url("../images/lotrthumb.png");
 }
 
-/* .sthings {
-    background-image: url("../images/lotrthumb.png");
-} */
+.sthings {
+    background-image: url("../images/sthingsthumb.jpg");
+}
 
 .dis {
     background-image: url("../images/disthumb.jpg");

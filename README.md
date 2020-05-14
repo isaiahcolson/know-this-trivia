@@ -27,17 +27,17 @@ Only one trivia game - Rick & Morty
 Still consisting of a "home" screen that will show user score for that theme
 10 questions, multiple choice
 
-
-
-
-
 <!-- Stretch Goals -->
-1. Increase number of themes to 4 - Place themes in a grid
-2. Increase number of themes to 9
-3. Track total score
-4. Increase number of themes to final number of 16
-5. Create a timer
-6. Give option for 2 players
+1. Increase number of themes to 8 - Place themes in a grid
+2. Apply launch screen final styling
+3. Increase number of themes to 12 - Adding one more row
+4. Apply quiz screen final styling
+5. Increase number of themes to 15 - Adding one more column
+
+<!-- Nice to Have -->
+1. Track total score
+2. Create a timer
+3. Give option for 2 players
 
 
 
@@ -55,8 +55,6 @@ Still consisting of a "home" screen that will show user score for that theme
 9. Who is the first to go in 'Total Rickall'?
 10. What is the only thing Rick cares about in the Vindicators?
 
-
-
 <!-- Lord of the Rings Questions -->
 1. Which book does Boromir die in?
 2. Which of these is another name for dwarves?
@@ -68,10 +66,6 @@ Still consisting of a "home" screen that will show user score for that theme
 8. What actor was originally cast as Aragorn?
 9. Who became King of Rohan after Theoden died?
 10. What causes Merry and Pippin to grow taller than other hobbits?
-
-
-
-
 
 <!-- Marvel Questions -->
 1. Which is not a word to activate the winter soldier?
@@ -85,10 +79,6 @@ Still consisting of a "home" screen that will show user score for that theme
 9. How much credit did Tony give Pepper for Stark Tower?
 10. Which Infinity Stone does Thanos get first?
 
-
-
-
-
 <!-- Back to the Future Questions -->
 1. What is the mall that Marty goes to when returning from 1955?
 2. Who was the president in 1955?
@@ -100,10 +90,6 @@ Still consisting of a "home" screen that will show user score for that theme
 8. What was one of the instructions on the Flux Capacitor?
 9. What is the name of Doc\'s dog?
 10. Which young actor made his film debut in Back to the Future II?
-
-
-
-
 
 <!-- The Office Questions -->
 1. What does Michael ask Pam to spread on his burnt foot?
@@ -117,10 +103,6 @@ Still consisting of a "home" screen that will show user score for that theme
 9. How much money does Michael donate to Oscar's nephew's charity?
 10. What is the preferred Pizza place among The Office staff?
 
-
-
-
-
 <!-- Disney Questions -->
 1. What is the name of the fictional city where Big Hero 6 takes place?
 2. What is the name of the little bear in \'Brother Bear\'?
@@ -132,3 +114,17 @@ Still consisting of a "home" screen that will show user score for that theme
 8. Who chooses Moana to return the heart?
 9. Mulan takes place in China during which dynasty?
 10. What kind of animal killed Tarzan’s real parents?
+
+
+
+<!-- Stranger Things Questions -->
+1. In what year does season one take place?
+2. What was the show originally called?
+3. Where does Joyce Byers work?
+4. Which of these cast members hasn't appeared on Broadway?
+5. Who was the character from Ghostbusters that Mike and Lucas both dressed as?
+6. Which cast member received praise from Stephen King before being cast?
+7. Which famous actor is featured on a poster in Nancy's room?
+8. What is the true name for the Upside Down?
+9. In which city does Eleven meet up with Kali?
+10. What film were the child actors required to watch to prepare for their parts?

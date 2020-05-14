@@ -562,6 +562,100 @@ const disQuestions = [
     }
 ];
 
+// SThings Questions
+const sthingsQuestions = [
+    {
+        question: 'In what year does season one take place?',
+        image: 'images/sthings1.jpg',
+        optionA: 'A. 1985',
+        optionB: 'B. 1981',
+        optionC: 'C. 1983',
+        optionD: 'D. 1984',
+        correct: 'C. 1983'
+    },
+    {
+        question: 'What was the show originally called?',
+        image: 'images/sthings2.jpg',
+        optionA: 'A. Strange Encounters',
+        optionB: 'B. Montauk',
+        optionC: 'C. Finding Will',
+        optionD: 'D. Entering Hawkins',
+        correct: 'B. Montauk'
+    },
+    {
+        question: 'Where does Joyce Byers work?',
+        image: 'images/sthings3.jpg',
+        optionA: 'A. Melvald\'s General Store',
+        optionB: 'B. RadioShack',
+        optionC: 'C. Hawkins General Store',
+        optionD: 'D. Hawkins Grocery',
+        correct: 'A. Melvald\'s General Store'
+    },
+    {
+        question: 'Which of these cast members hasn\'t appeared on Broadway?',
+        image: 'images/sthings4.jpg',
+        optionA: 'A. Gaten Matarazzo',
+        optionB: 'B. Caleb McLaughlin',
+        optionC: 'C. Sadie Sink',
+        optionD: 'D. Finn Wolfhard',
+        correct: 'D. Finn Wolfhard'
+    },
+    {
+        question: 'Who was the character from Ghostbusters that Mike and Lucas both dressed as?',
+        image: 'images/sthings5.jpg',
+        optionA: 'A. Winston',
+        optionB: 'B. Egon',
+        optionC: 'C. Venkman',
+        optionD: 'D. Stance',
+        correct: 'C. Venkman'
+    },
+    {
+        question: 'Which cast member received praise from Stephen King before being cast?',
+        image: 'images/sthings6.png',
+        optionA: 'A. Millie Bobby Brown',
+        optionB: 'B. Natalie Dyer',
+        optionC: 'C. Winona Ryder',
+        optionD: 'D. David Harbour',
+        correct: 'A. Millie Bobby Brown'
+    },
+    {
+        question: 'Which famous actor is featured on a poster in Nancy\'s room?',
+        image: 'images/sthings7.jpeg',
+        optionA: 'A. Kevin Bacon',
+        optionB: 'B. Rob Lowe',
+        optionC: 'C. John Stamos',
+        optionD: 'D. Tom Cruise',
+        correct: 'D. Tom Cruise'
+    },
+    {
+        question: 'What is the true name for the Upside Down?',
+        image: 'images/sthings8.jpeg',
+        optionA: 'A. The Outer Space',
+        optionB: 'B. The Other Place',
+        optionC: 'C. The Nether',
+        optionD: 'D. Inner Space',
+        correct: 'C. The Nether'
+    },
+    {
+        question: 'In which city does Eleven meet up with Kali?',
+        image: 'images/sthings9.jpg',
+        optionA: 'A. Chicago',
+        optionB: 'B. Pittsburg',
+        optionC: 'C. Indianapolis',
+        optionD: 'D. New York',
+        correct: 'A. Chicago'
+    },
+    {
+        question: 'What film were the child actors required to watch to prepare for their parts?',
+        image: 'images/sthings10.jpg',
+        optionA: 'A. Alien',
+        optionB: 'B. Star Wars',
+        optionC: 'C. The Goonies',
+        optionD: 'D. Stand by Me',
+        correct: 'D. Stand by Me'
+    }
+];
+
 let questionTracker = 0;
 let userScore = 0;
 
@@ -977,6 +1071,63 @@ $('.dis__finish').click(function() {
     $('.questions').toggleClass('hidden');
     $('.dis__replay').toggleClass('hidden');
     $('.dis__finish').toggleClass('hidden');
+    $('.score').toggleClass('hidden');
+    $('.launch').toggleClass('hidden');
+});
+
+
+
+/* SThings Buttons */
+// Initialize SThings trivia game
+$('.sthings').click(function() {
+    $('.quiz-container').toggleClass('hidden');
+    displayQuestions(sthingsQuestions[0]);
+    $('.launch').toggleClass('hidden');
+    $('.sthings__button').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+});
+
+// sthings button to verify answers in game
+$('.sthings__button').click(function() {
+    // const $answer = $('input[name=answers]:checked').siblings('label').html();
+    checkValue(sthingsQuestions[questionTracker]);
+    questionTracker++;
+    if ( questionTracker == 10 ) {
+        $gameCheck();
+        $('.sthings__button').toggleClass('hidden');
+        $('.sthings__replay').toggleClass('hidden');
+        $('.sthings__finish').toggleClass('hidden');
+    } else {
+        $removeSelection();
+        displayQuestions(sthingsQuestions[questionTracker]);
+    }
+});
+
+// Replay sthings match
+$('.sthings__replay').click(function() {
+    $('.score').toggleClass('hidden');
+    $('.sthings__button').toggleClass('hidden');
+    // $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.sthings__replay').toggleClass('hidden');
+    $('.sthings__finish').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+    displayQuestions(sthingsQuestions[0]);
+    $removeSelection();
+});
+
+// Return to launch screen from sthings game
+$('.sthings__finish').click(function() {
+    // $('.score').toggleClass('hidden');
+    $removeSelection();
+    $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.sthings__replay').toggleClass('hidden');
+    $('.sthings__finish').toggleClass('hidden');
     $('.score').toggleClass('hidden');
     $('.launch').toggleClass('hidden');
 });
