@@ -1,5 +1,5 @@
 /* Rick & Morty questions */
-const questions = [
+const ramQuestions = [
     {
         question: 'When did \'Rick and Morty\' first air?',
         image: 'images/1-1.png',
@@ -92,10 +92,11 @@ const questions = [
     }
 ];
 
+// LOTR Questions
 const lotrQuestions = [
     {
         question: 'Which book does Boromir die in?',
-        image: 'images/1-1.png',
+        image: 'images/lotr1.jpg',
         optionA: 'A. The Fellowship of the Ring',
         optionB: 'B. The Two Towers',
         optionC: 'C. The Return of the King',
@@ -104,7 +105,7 @@ const lotrQuestions = [
     },
     {
         question: 'Which of these is another name for dwarves?',
-        image: 'images/1-2.jpeg',
+        image: 'images/lotr2.jpg',
         optionA: 'A. Luthien\'s Folk',
         optionB: 'B. The Old Ones',
         optionC: 'C. The Deep Ones',
@@ -113,7 +114,7 @@ const lotrQuestions = [
     },
     {
         question: 'What is the name of Galadriel\'s husband?',
-        image: 'images/1-3.png',
+        image: 'images/lotr3.jpg',
         optionA: 'A. Celebrian',
         optionB: 'B. Celebrimbor',
         optionC: 'C. Celeborn',
@@ -122,7 +123,7 @@ const lotrQuestions = [
     },
     {
         question: 'After Sauron, who held the One Ring?',
-        image: 'images/1-4.png',
+        image: 'images/lotr4.jpg',
         optionA: 'A. Elrond',
         optionB: 'B. Isildur',
         optionC: 'C. Gollum',
@@ -131,7 +132,7 @@ const lotrQuestions = [
     },
     {
         question: 'Where is Legolas from?',
-        image: 'images/1-5.png',
+        image: 'images/lotr5.png',
         optionA: 'A. Fangorn Forest',
         optionB: 'B. Rivendell',
         optionC: 'C. Lothlorian',
@@ -140,7 +141,7 @@ const lotrQuestions = [
     },
     {
         question: 'What type of blade was Frodo stabbed with?',
-        image: 'images/1-6.png',
+        image: 'images/lotr6.jpg',
         optionA: 'A. Morgul',
         optionB: 'B. Mithril',
         optionC: 'C. Mithrandir',
@@ -149,7 +150,7 @@ const lotrQuestions = [
     },
     {
         question: 'How many Rings of Power were there?',
-        image: 'images/1-7.jpeg',
+        image: 'images/lotr7.jpg',
         optionA: 'A. 5',
         optionB: 'B. 9',
         optionC: 'C. 13',
@@ -158,16 +159,16 @@ const lotrQuestions = [
     },
     {
         question: 'What actor was originally cast as Aragorn?',
-        image: 'images/1-8.jpeg',
+        image: 'images/lotr8.jpg',
         optionA: 'A. Christian Bale',
         optionB: 'B. Stuart Townsend',
         optionC: 'C. Brad Pitt',
-        optionD: 'D. David Schwimmer',
+        optionD: 'D. Viggo Mortensen',
         correct: 'B. Stuart Townsend'
     },
     {
         question: 'Who became King of Rohan after Theoden died?',
-        image: 'images/1-9.jpg',
+        image: 'images/lotr9.jpg',
         optionA: 'A. Eowyn',
         optionB: 'B. Grima',
         optionC: 'C. Aragorn',
@@ -176,7 +177,7 @@ const lotrQuestions = [
     },
     {
         question: 'What causes Merry and Pippin to grow taller than other hobbits?',
-        image: 'images/1-10.png',
+        image: 'images/lotr10.jpg',
         optionA: 'A. White Wizard\s spell',
         optionB: 'B. Water in Fangorn',
         optionC: 'C. They\'re Born That Way',
@@ -262,48 +263,110 @@ const $gameCheck = () => {
 
 /* Button event listeners */
 
-// Initialize game with displaying first question in array with click of button
-$('.grid__item').click(function() {
-    // $('.quiz-container').css('display', 'flex');
+// Initialize Rick and Morty trivia game
+$('.ram').click(function() {
     $('.quiz-container').toggleClass('hidden');
-    displayQuestions(questions[0]);
+    displayQuestions(ramQuestions[0]);
     $('.launch').toggleClass('hidden');
+    $('.ram__button').toggleClass('hidden');
     questionTracker = 0;
     userScore = 0;
 });
 
-// When button is clicked, game is being played
-$('.questions__button').click(function() {
+// Initialize LOTR trivia game
+$('.lotr').click(function() {
+    $('.quiz-container').toggleClass('hidden');
+    displayQuestions(lotrQuestions[0]);
+    $('.launch').toggleClass('hidden');
+    $('.lotr__button').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+});
+
+// Rick and Morty button to verify answers in game
+$('.ram__button').click(function() {
     // const $answer = $('input[name=answers]:checked').siblings('label').html();
-    checkValue(questions[questionTracker]);
+    checkValue(ramQuestions[questionTracker]);
     questionTracker++;
     if ( questionTracker == 10 ) {
         $gameCheck();
+        $('.ram__button').toggleClass('hidden');
+        $('.ram__replay').toggleClass('hidden');
+        $('.ram__finish').toggleClass('hidden');
     } else {
         $removeSelection();
-        displayQuestions(questions[questionTracker]);
+        displayQuestions(ramQuestions[questionTracker]);
     }
 });
 
-// Replay match
-$('.score__replay').click(function() {
+// LOTR button to verify answers in game
+$('.lotr__button').click(function() {
+    // const $answer = $('input[name=answers]:checked').siblings('label').html();
+    checkValue(lotrQuestions[questionTracker]);
+    questionTracker++;
+    if ( questionTracker == 10 ) {
+        $gameCheck();
+        $('.lotr__button').toggleClass('hidden');
+        $('.lotr__replay').toggleClass('hidden');
+        $('.lotr__finish').toggleClass('hidden');
+    } else {
+        $removeSelection();
+        displayQuestions(lotrQuestions[questionTracker]);
+    }
+});
+
+// Replay Rick and Morty match
+$('.ram__replay').click(function() {
     $('.score').toggleClass('hidden');
+    $('.ram__button').toggleClass('hidden');
     // $('.quiz-container').toggleClass('hidden');
     $('.img').toggleClass('hidden');
     $('.questions').toggleClass('hidden');
+    $('.ram__replay').toggleClass('hidden');
+    $('.ram__finish').toggleClass('hidden');
     questionTracker = 0;
     userScore = 0;
-    displayQuestions(questions[0]);
+    displayQuestions(ramQuestions[0]);
     $removeSelection();
 });
 
-// Return to launch screen
-$('.score__finish').click(function() {
+// Replay LOTR match
+$('.lotr__replay').click(function() {
+    $('.score').toggleClass('hidden');
+    $('.lotr__button').toggleClass('hidden');
+    // $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.lotr__replay').toggleClass('hidden');
+    $('.lotr__finish').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+    displayQuestions(lotrQuestions[0]);
+    $removeSelection();
+});
+
+// Return to launch screen from Rick and Morty game
+$('.ram__finish').click(function() {
     // $('.score').toggleClass('hidden');
     $removeSelection();
     $('.quiz-container').toggleClass('hidden');
     $('.img').toggleClass('hidden');
     $('.questions').toggleClass('hidden');
+    $('.ram__replay').toggleClass('hidden');
+    $('.ram__finish').toggleClass('hidden');
+    $('.score').toggleClass('hidden');
+    $('.launch').toggleClass('hidden');
+});
+
+// Return to launch screen from LOTR game
+$('.lotr__finish').click(function() {
+    // $('.score').toggleClass('hidden');
+    $removeSelection();
+    $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.lotr__replay').toggleClass('hidden');
+    $('.lotr__finish').toggleClass('hidden');
     $('.score').toggleClass('hidden');
     $('.launch').toggleClass('hidden');
 });

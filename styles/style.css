@@ -48,6 +48,34 @@ body {
     background-image: url("../images/ramthumb.png");
 }
 
+.lotr {
+    background-image: url("../images/lotrthumb.png");
+}
+
+/* .sthings {
+    background-image: url("../images/lotrthumb.png");
+}
+
+.dis {
+    background-image: url("../images/lotrthumb.png");
+}
+
+.marv {
+    background-image: url("../images/lotrthumb.png");
+}
+
+.swars {
+    background-image: url("../images/lotrthumb.png");
+}
+
+.office {
+    background-image: url("../images/lotrthumb.png");
+}
+
+.bttf {
+    background-image: url("../images/lotrthumb.png");
+} */
+
 .grid__item img:hover {
     opacity: 0;
 }
@@ -149,7 +177,7 @@ button {
     letter-spacing: .1em;
 }
 
-.score__replay {
+.replay {
     background: var(--secondary-alt);
     border: none;
     border-radius: var(--border-radius);
