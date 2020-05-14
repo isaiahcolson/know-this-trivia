@@ -8,7 +8,7 @@
     --secondary: #55c4cf;
     --secondary-dark: #ee666d;
     --secondary-alt: #62d8ae;
-    --dark: #232832;
+    --dark: #595959;
     --grey: #e6e6e6;
     --light: #f9f9f9;
     --white: #FFF;
@@ -28,6 +28,18 @@ body {
     height: 100vh;
 }
 
+h1 {
+    font-family: var(--base-font);
+    font-weight: 900;
+    font-size: 3em;
+    letter-spacing: -.02em;
+    color: var(--dark);
+    top: 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+}
+
 .launch__grid {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -35,7 +47,7 @@ body {
 }
 
 .grid__item {
-    text-align: center;
+    /* text-align: center; */
     cursor: pointer;
     margin: 5px;
     border-radius: var(--border-radius);
@@ -100,6 +112,26 @@ body {
     box-shadow: 0px 15px 15px 5px rgba(0,0,0,.2);
     overflow: hidden;
 }
+
+.bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-image: url(../images/launchbg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: .25s ease;
+}
+
+/* .ram:hover ~ .bg {
+    background-image: url(../images/ramlaunchbg.png);
+} */
 
 .questions {
     margin: 0 40px 0 40px;

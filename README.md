@@ -127,8 +127,6 @@ Still consisting of a "home" screen that will show user score for that theme
 9. In which city does Eleven meet up with Kali?
 10. What film were the child actors required to watch to prepare for their parts?
 
-
-
 <!-- Star Wars Questions -->
 1. Jedi Council consists of how many members?
 2. Who has not had an appearance in a Star Wars film or movie?
