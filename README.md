@@ -138,3 +138,27 @@ Still consisting of a "home" screen that will show user score for that theme
 8. Who is the leader of the swoop-riding pirates known as the Cloud-Riders?
 9. What is known as the hidden world of the Sith?
 10. Who voices IG-11 in the Mandalorian?
+
+<!-- Harry Potter Questions -->
+1. How many times did Snape protect Harry?
+2. How many Hogwarts students in totl are accepted each year?
+3. Who is the Hufflepuff house ghost?
+4. Who was headmaster of Hogwarts when the Chamber of Secrets was opened the first time?
+5. How many staircases does Hogwarts have?
+6. According to the Sorting Hat what qualities does Ravenclaw possess?
+7. Where is Azkaban fortress located?
+8. What are the first names of Voldemort’s parents?
+9. What is Harry’s wand’s core?
+10. A wizard who cannot do magic is known as what?
+
+<!-- Simpsons Questions -->
+1. Who was Bart's best friend named after?
+2. What beverage did Homer create?
+3. In "Simpsons Roasting on an Open Fire", what does Bart want for Christmas?
+4. What is the name of Mr. Burns’ teddy bear?
+5. What is the name of Homer’s brother?
+6. What did Homer name his ”fourth child”?
+7. What is the name of the cocktail waitress Ned married?
+8. Which of these is not one of Cletus\' kid\'s names?
+9. What is Homer's email address?
+10. Where did Lionel Hutz claim to get his law degree?

@@ -750,6 +750,194 @@ const swarsQuestions = [
     }
 ];
 
+// potter Questions
+const potterQuestions = [
+    {
+        question: 'How many times did Snape protect Harry?',
+        image: 'images/swars1.jpg',
+        optionA: 'A. 7',
+        optionB: 'B. 12',
+        optionC: 'C. 9',
+        optionD: 'D. 14',
+        correct: 'D. 14'
+    },
+    {
+        question: 'How many Hogwarts students in total are accepted each year?',
+        image: 'images/swars2.jpg',
+        optionA: 'A. 800',
+        optionB: 'B. 1,200',
+        optionC: 'C. 1,000',
+        optionD: 'D. 2,000',
+        correct: 'C. 1,000'
+    },
+    {
+        question: 'Who is the Hufflepuff house ghost?',
+        image: 'images/swars3.jpeg',
+        optionA: 'A. Grey Lady',
+        optionB: 'B. Fat Friar',
+        optionC: 'C. Bloody Baron',
+        optionD: 'D. Professor Binns',
+        correct: 'B. Fat Friar'
+    },
+    {
+        question: 'Who was headmaster of Hogwarts when the Chamber of Secrets was opened the first time?',
+        image: 'images/swars4.jpg',
+        optionA: 'A. Phineas Nigellus',
+        optionB: 'B. Eupraxia Mole',
+        optionC: 'C. Armando Dippet',
+        optionD: 'D. Dilys Derwent',
+        correct: 'C. Armando Dippet'
+    },
+    {
+        question: 'How many staircases does Hogwarts have?',
+        image: 'images/swars5.jpg',
+        optionA: 'A. 142',
+        optionB: 'B. 300',
+        optionC: 'C. 229',
+        optionD: 'D. 198',
+        correct: 'A. 142'
+    },
+    {
+        question: 'According to the Sorting Hat what qualities does Ravenclaw possess?',
+        image: 'images/swars6.jpg',
+        optionA: 'A. Courage and Bravery',
+        optionB: 'B. Intelligence and Learning',
+        optionC: 'C. Hard Work and Patience',
+        optionD: 'D. Ambition and Cunning',
+        correct: 'B. Intelligence and Learning'
+    },
+    {
+        question: 'Where is Azkaban fortress located?',
+        image: 'images/swars7.jpg',
+        optionA: 'A. The North Sea',
+        optionB: 'B. Bodmin Moor',
+        optionC: 'C. Dartmoor',
+        optionD: 'D. Isle of Skye',
+        correct: 'A. The North Sea'
+    },
+    {
+        question: 'What are the first names of Voldemort’s parents?',
+        image: 'images/swars8.jpeg',
+        optionA: 'A. Percival & Kendra',
+        optionB: 'B. Frank & Alice',
+        optionC: 'C. Tom & Pandora',
+        optionD: 'D. Tom & Merope',
+        correct: 'D. Tom & Merope'
+    },
+    {
+        question: 'What is Harry’s wand’s core?',
+        image: 'images/swars9.jpeg',
+        optionA: 'A. Unicorn Hair',
+        optionB: 'B. Phoenix Feather',
+        optionC: 'C. Dragon Heartstring',
+        optionD: 'D. Basilisk Fang',
+        correct: 'B. Phoenix Feather'
+    },
+    {
+        question: 'A wizard who cannot do magic is known as what?',
+        image: 'images/swars10.jpg',
+        optionA: 'A. Muggle',
+        optionB: 'B. Scrub',
+        optionC: 'C. Squib',
+        optionD: 'D. Crouch',
+        correct: 'C. Squib'
+    }
+];
+
+// simpsons Questions
+const simpsonsQuestions = [
+    {
+        question: 'Who was Bart\'s best friend named after?',
+        image: 'images/swars1.jpg',
+        optionA: 'A. Richard Nixon',
+        optionB: 'B. Charlie Chaplin',
+        optionC: 'C. John Wayne',
+        optionD: 'D. Janis Joplin',
+        correct: 'A. Richard Nixon'
+    },
+    {
+        question: 'What beverage did Homer create?',
+        image: 'images/swars2.jpg',
+        optionA: 'A. Voodoo Homer',
+        optionB: 'B. Salty Homer',
+        optionC: 'C. Flaming Homer',
+        optionD: 'D. Sour Homer',
+        correct: 'C. Flaming Homer'
+    },
+    {
+        question: 'In "Simpsons Roasting on an Open Fire", what does Bart want for Christmas?',
+        image: 'images/swars3.jpeg',
+        optionA: 'A. Rifle',
+        optionB: 'B. Tattoo',
+        optionC: 'C. Samurai Sword',
+        optionD: 'D. Skateboard',
+        correct: 'B. Tattoo'
+    },
+    {
+        question: 'What is the name of Mr. Burns’ teddy bear?',
+        image: 'images/swars4.jpg',
+        optionA: 'A. Bobo',
+        optionB: 'B. Togo',
+        optionC: 'C. Nono',
+        optionD: 'D. Gogo',
+        correct: 'A. Bobo'
+    },
+    {
+        question: 'What is the name of Homer’s brother?',
+        image: 'images/swars5.jpg',
+        optionA: 'A. Hank Simpson',
+        optionB: 'B. Herbert Powell',
+        optionC: 'C. Hank Powell',
+        optionD: 'D. Henry Powell',
+        correct: 'B. Herbert Powell'
+    },
+    {
+        question: 'What did Homer name his fourth child?',
+        image: 'images/swars6.jpg',
+        optionA: 'A. Snowball',
+        optionB: 'B. Herb',
+        optionC: 'C. Stitch Face',
+        optionD: 'D. Duff',
+        correct: 'C. Stitch Face'
+    },
+    {
+        question: 'What is the name of the cocktail waitress Ned married?',
+        image: 'images/swars7.jpg',
+        optionA: 'A. Summer',
+        optionB: 'B. Candy',
+        optionC: 'C. Amber',
+        optionD: 'D. Ginger',
+        correct: 'D. Ginger'
+    },
+    {
+        question: 'Which of these is not one of Cletus\' kid\'s names?',
+        image: 'images/swars8.jpeg',
+        optionA: 'A. Crystal Meth',
+        optionB: 'B. Minimum Wade',
+        optionC: 'C. Barbara',
+        optionD: 'D. Mary',
+        correct: 'C. Barbara'
+    },
+    {
+        question: 'What is Homer\'s email address?',
+        image: 'images/swars9.jpeg',
+        optionA: 'A. groening67@yahoo.com',
+        optionB: 'B. chunkylover53@aol.com',
+        optionC: 'C. dohsimp76@aol.com',
+        optionD: 'D. maggiedaddy45@aol.com',
+        correct: 'B. chunkylover53@aol.com'
+    },
+    {
+        question: 'Where did Lionel Hutz claim to get his law degree?',
+        image: 'images/swars10.jpg',
+        optionA: 'A. Princeton',
+        optionB: 'B. Harvord',
+        optionC: 'C. Penn',
+        optionD: 'D. Quinnipiac',
+        correct: 'A. Princeton'
+    }
+];
+
 let questionTracker = 0;
 let userScore = 0;
 
