@@ -104,13 +104,13 @@ const lotrQuestions = [
         correct: 'B. The Two Towers'
     },
     {
-        question: 'Which of these is another name for dwarves?',
+        question: 'Which is not a true statement about dwarves?',
         image: 'images/lotr2.jpg',
-        optionA: 'A. Luthien\'s Folk',
-        optionB: 'B. The Old Ones',
-        optionC: 'C. The Deep Ones',
-        optionD: 'D. Durin\'s Folk',
-        correct: 'D. Durin\'s Folk'
+        optionA: 'A. Never Go Bald',
+        optionB: 'B. Bury Dead in Stone',
+        optionC: 'C. Fear the Ocean',
+        optionD: 'D. Created by a Wizard',
+        correct: 'D. Created by a Wizard'
     },
     {
         question: 'What is the name of Galadriel\'s husband?',
@@ -256,7 +256,7 @@ const marvQuestions = [
         image: 'images/marv8.jpg',
         optionA: 'A. Pepper',
         optionB: 'B. Martha',
-        optionC: 'C. Valeria',
+        optionC: 'C. Valerie',
         optionD: 'D. Patricia',
         correct: 'D. Patricia'
     },
@@ -397,7 +397,7 @@ const officeQuestions = [
     {
         question: 'What\'s Stanley\'s morning 3 by 5?',
         image: 'images/office3.jpg',
-        optionA: 'A. Coffe, 3 Cream, 5 Sugar',
+        optionA: 'A. Coffee, 3 Cream, 5 Sugar',
         optionB: 'B. Iced Tea, 3 Sugar, 5 Cream',
         optionC: 'C. Coffee, 3 Sugar, 5 Cream',
         optionD: 'D. 3 Bagels, 5 Min. Nap',
@@ -406,17 +406,17 @@ const officeQuestions = [
     {
         question: 'What does Michael eat instead of ice cream when they don\'t have any?',
         image: 'images/office4.jpg',
-        optionA: 'A. Sour Cream',
+        optionA: 'A. Sour Cream & Cheese',
         optionB: 'B. Mayo and Chocolate Chips',
         optionC: 'C. Mayo and Black Olives',
-        optionD: 'D. Cereal',
+        optionD: 'D. Cottage Cheese & Fruit',
         correct: 'C. Mayo and Black Olives'
     },
     {
-        question: 'What is the scaries animarl Dwight and Robert California\'s son agree on?',
+        question: 'What is the scariest animal Dwight and Robert California\'s son agree on?',
         image: 'images/office5.jpg',
         optionA: 'A. Box Jellyfish',
-        optionB: 'B. Bear',
+        optionB: 'B. Brown Bear',
         optionC: 'C. Black Bear',
         optionD: 'D. Shark',
         correct: 'A. Box Jellyfish'
@@ -458,7 +458,7 @@ const officeQuestions = [
         correct: 'C. $25'
     },
     {
-        question: 'What is the preferred Pizza place among The Office staff?',
+        question: 'What is the preferred pizza place among The Office staff?',
         image: 'images/office10.jpg',
         optionA: 'A. Domino\'s',
         optionB: 'B. Pizza Hut',
