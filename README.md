@@ -27,43 +27,47 @@
 
 <h2>Initial Concept Planning</h2>
 <h3>User Stories</h3>
-User can see a selection of themes center page
-The top of page holds title, score for individual theme, and overall score
-User selects trivia theme
-
-User sees an image of related material with a question displayed
-Maybe even some theme images on the side to enhance the theme experience
-User can select 1 of 4 available input options for the answer to the question
-They will click a button to move to next page
-Repeat above 9 more times for a total of 10 slides/ questions
-
-Two scores will display at the end of the questions
-One score will be of the current theme they selected
-Second score will be of all themes (assuming there will be enough time to create more)
-Button below to return to page to select a different theme (or try again)
-
-If user is returned, they can select out of the remaining themes
-User will not be able to replay last theme if there are more than one
-Overall score will update
-
-
-
+<p>User can see a selection of themes center page</p>
+<p>The top of page holds title, score for individual theme, and overall score</p>
+<p>User selects trivia theme</p>
+<p></p>
+<p>User sees an image of related material with a question displayed</p>
+<p>Maybe even some theme images on the side to enhance the theme experience</p>
+<p>User can select 1 of 4 available input options for the answer to the question</p>
+<p>They will click a button to move to next page</p>
+<p>Repeat above 9 more times for a total of 10 slides/ questions</p>
+<p></p>
+<p>Two scores will display at the end of the questions</p>
+<p>One score will be of the current theme they selected</p>
+<p>Second score will be of all themes (assuming there will be enough time to create more)</p>
+<p>Button below to return to page to select a different theme (or try again)</p>
+<p></p>
+<p>If user is returned, they can select out of the remaining themes</p>
+<p>User will not be able to replay last theme if there are more than one</p>
+<p>Overall score will update</p>
+<p></p>
+<p></p>
+<p></p>
 <h3>Minimum Viable Product</h3>
-First trivia game - Rick & Morty
-Still consisting of a "home" screen that will show user score for that theme
-10 questions, multiple choice
-
+<p>First trivia game - Rick & Morty.</p>
+<p>Still consisting of a "home" screen that will show user score for that theme.</p>
+<p>10 questions, multiple choice.</p>
+<p></p>
 <h3>Stretch Goals</h3>
-1. Increase number of themes to 8 - Place themes in a grid
-2. Apply launch screen final styling
-3. Increase number of themes to 12 - Adding one more row
-4. Apply quiz screen final styling
-5. Increase number of themes to 15 - Adding one more column
-
+<ol>
+  <li>Increase number of themes to 8 - Place themes in a grid</li>
+  <li>Apply launch screen final styling</li>
+  <li>Increase number of themes to 12 - Adding one more row</li>
+  <li>Apply quiz screen final styling</li>
+  <li>Increase number of themes to 15 - Adding one more column</li>
+</ol>
+<p></p>
 <h3>Nice to Have</h3>
-1. Track total score
-2. Create a timer
-3. Give option for 2 players
+<ol>
+  <li>Track total score</li>
+  <li>Create a timer</li>
+  <li>Give option for 2 players</li>
+</ol>
 
 
 
