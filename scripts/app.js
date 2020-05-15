@@ -13,17 +13,17 @@ const ramQuestions = [
         question: 'What is the name of Morty\'s dog?',
         image: 'images/1-2.jpeg',
         optionA: 'A. Snowball',
-        optionB: 'B. Fluffles',
+        optionB: 'B. Max',
         optionC: 'C. Squanchy',
-        optionD: 'D. Simba',
+        optionD: 'D. Charlie',
         correct: 'A. Snowball'
     },
     {
         question: 'Who voices Fart?',
         image: 'images/1-3.png',
-        optionA: 'A. Oscar the Grouch',
+        optionA: 'A. John Oliver',
         optionB: 'B. Jemaine Clement',
-        optionC: 'C. Martha Stewart',
+        optionC: 'C. Stephen Colbert',
         optionD: 'D. David Bowie',
         correct: 'B. Jemaine Clement'
     },
@@ -50,17 +50,17 @@ const ramQuestions = [
         image: 'images/1-6.png',
         optionA: 'A. Super Nova',
         optionB: 'B. Unity',
-        optionC: 'C. Beth',
+        optionC: 'C. Christina Hendricks',
         optionD: 'D. Jessica',
         correct: 'B. Unity'
     },
     {
         question: 'What is the name of Beth\'s imaginary world?',
         image: 'images/1-7.jpeg',
-        optionA: 'A. Hoth',
+        optionA: 'A. Floopyland',
         optionB: 'B. Froopyland',
         optionC: 'C. Neverland',
-        optionD: 'D. Atlantis',
+        optionD: 'D. Atlantiland',
         correct: 'B. Froopyland'
     },
     {
@@ -69,11 +69,11 @@ const ramQuestions = [
         optionA: 'A. Justin Roiland',
         optionB: 'B. Thomas Middleditch',
         optionC: 'C. Dan Harmon',
-        optionD: 'D. Lin Manuel Miranda',
+        optionD: 'D. Alan Tudyk',
         correct: 'C. Dan Harmon'
     },
     {
-        question: 'Who is the first to go in \'Total Rickall\'?',
+        question: 'Who is the first to die in \'Total Rickall\'?',
         image: 'images/1-9.jpg',
         optionA: 'A. Uncle Steve',
         optionB: 'B. Pencilvester',
@@ -82,7 +82,7 @@ const ramQuestions = [
         correct: 'A. Uncle Steve'
     },
     {
-        question: 'What is the only thing Rick cares about in the Vindicators?',
+        question: 'What is the only thing Rick cares about in Vindicators 3?',
         image: 'images/1-10.png',
         optionA: 'A. Noob Noob',
         optionB: 'B. Nothing',
@@ -243,7 +243,7 @@ const marvQuestions = [
         correct: 'B. Adam Warlock'
     },
     {
-        question: 'What show has cameo appearances in Russo brother\'s movies?',
+        question: 'What show has cameo appearances in the Russo brother\'s movies?',
         image: 'images/marv7.jpg',
         optionA: 'A. Community',
         optionB: 'B. Daredevil',
@@ -332,7 +332,7 @@ const bttfQuestions = [
         image: 'images/bttf6.jpg',
         optionA: 'A. 10:04 p.m.',
         optionB: 'B. 9:56 p.m.',
-        optionC: 'C. 10:15 a.m.',
+        optionC: 'C. 10:32 p.m.',
         optionD: 'D. 12:03 a.m.',
         correct: 'A. 10:04 p.m.'
     },
@@ -388,7 +388,7 @@ const officeQuestions = [
     {
         question: 'What did Michael say everyone called Phyllis back in high school?',
         image: 'images/office2.jpg',
-        optionA: 'A. Less-Urban Aunt Jemima',
+        optionA: 'A. Aunt Jemima',
         optionB: 'B. Easy Rider',
         optionC: 'C. Phyll',
         optionD: 'D. Crappin\' Lapin',
@@ -404,7 +404,7 @@ const officeQuestions = [
         correct: 'B. Iced Tea, 3 Sugar, 5 Cream'
     },
     {
-        question: 'What does Michael eat instead of ice cream when they don\'t have any?',
+        question: 'What does Michael eat instead of ice cream when they run out?',
         image: 'images/office4.jpg',
         optionA: 'A. Sour Cream & Cheese',
         optionB: 'B. Mayo and Chocolate Chips',
@@ -434,8 +434,8 @@ const officeQuestions = [
         question: 'What is Michael and Jan\'s safe word if things go too far?',
         image: 'images/office7.jpg',
         optionA: 'A. Bonfire',
-        optionB: 'B. Candle',
-        optionC: 'C. Candles',
+        optionB: 'B. Furnace',
+        optionC: 'C. Freight Car',
         optionD: 'D. Foliage',
         correct: 'D. Foliage'
     },
@@ -444,8 +444,8 @@ const officeQuestions = [
         image: 'images/office8.jpeg',
         optionA: 'A. Kelly',
         optionB: 'B. Erin',
-        optionC: 'C. Margaret',
-        optionD: 'D. Kevin',
+        optionC: 'C. Holly',
+        optionD: 'D. Phyllis',
         correct: 'A. Kelly'
     },
     {
@@ -507,7 +507,7 @@ const disQuestions = [
         correct: 'C. Lady Tremaine'
     },
     {
-        question: 'How many brothers does Hans have in the movie Frozen??',
+        question: 'How many brothers does Hans have in the movie Frozen?',
         image: 'images/dis5.jpg',
         optionA: 'A. 12',
         optionB: 'B. 5',
@@ -534,7 +534,7 @@ const disQuestions = [
         correct: 'B. Coffee'
     },
     {
-        question: 'Who chooses Moana to return the heart?',
+        question: 'Who chooses Moana to return the heart to Te Fiti?',
         image: 'images/dis8.jpeg',
         optionA: 'A. Her Father',
         optionB: 'B. Her Grandmother',
@@ -630,10 +630,10 @@ const sthingsQuestions = [
     {
         question: 'What is the true name for the Upside Down?',
         image: 'images/sthings8.jpeg',
-        optionA: 'A. The Outer Space',
+        optionA: 'A. The Neather',
         optionB: 'B. The Other Place',
         optionC: 'C. The Nether',
-        optionD: 'D. Inner Space',
+        optionD: 'D. The Inner Space',
         correct: 'C. The Nether'
     },
     {
@@ -695,7 +695,7 @@ const swarsQuestions = [
         correct: 'C. Han'
     },
     {
-        question: 'Which actress starred as Queen Amidala’s decoy and hand-maiden Sabè?',
+        question: 'Which actress played Queen Amidala’s decoy and hand-maiden Sabè?',
         image: 'images/swars5.jpg',
         optionA: 'A. Kiera Knightley',
         optionB: 'B. Sofia Coppola',
@@ -715,7 +715,7 @@ const swarsQuestions = [
     {
         question: 'The planet Kashyyyk is home to who?',
         image: 'images/swars7.jpg',
-        optionA: 'A. The Clones',
+        optionA: 'A. Clones',
         optionB: 'B. Wookies',
         optionC: 'C. Yoda',
         optionD: 'D. Jabba the Hutt',
