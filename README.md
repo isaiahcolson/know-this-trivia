@@ -141,7 +141,7 @@ Still consisting of a "home" screen that will show user score for that theme
 
 <!-- Harry Potter Questions -->
 1. How many times did Snape protect Harry?
-2. How many Hogwarts students in totl are accepted each year?
+2. How many Hogwarts students in total are accepted each year?
 3. Who is the Hufflepuff house ghost?
 4. Who was headmaster of Hogwarts when the Chamber of Secrets was opened the first time?
 5. How many staircases does Hogwarts have?
