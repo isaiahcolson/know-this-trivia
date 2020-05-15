@@ -754,7 +754,7 @@ const swarsQuestions = [
 const potterQuestions = [
     {
         question: 'How many times did Snape protect Harry?',
-        image: 'images/swars1.jpg',
+        image: 'images/potter1.jpg',
         optionA: 'A. 7',
         optionB: 'B. 12',
         optionC: 'C. 9',
@@ -763,7 +763,7 @@ const potterQuestions = [
     },
     {
         question: 'How many Hogwarts students in total are accepted each year?',
-        image: 'images/swars2.jpg',
+        image: 'images/potter2.jpg',
         optionA: 'A. 800',
         optionB: 'B. 1,200',
         optionC: 'C. 1,000',
@@ -772,7 +772,7 @@ const potterQuestions = [
     },
     {
         question: 'Who is the Hufflepuff house ghost?',
-        image: 'images/swars3.jpeg',
+        image: 'images/potter3.jpg',
         optionA: 'A. Grey Lady',
         optionB: 'B. Fat Friar',
         optionC: 'C. Bloody Baron',
@@ -781,7 +781,7 @@ const potterQuestions = [
     },
     {
         question: 'Who was headmaster of Hogwarts when the Chamber of Secrets was opened the first time?',
-        image: 'images/swars4.jpg',
+        image: 'images/potter4.jpg',
         optionA: 'A. Phineas Nigellus',
         optionB: 'B. Eupraxia Mole',
         optionC: 'C. Armando Dippet',
@@ -790,7 +790,7 @@ const potterQuestions = [
     },
     {
         question: 'How many staircases does Hogwarts have?',
-        image: 'images/swars5.jpg',
+        image: 'images/potter5.jpg',
         optionA: 'A. 142',
         optionB: 'B. 300',
         optionC: 'C. 229',
@@ -799,7 +799,7 @@ const potterQuestions = [
     },
     {
         question: 'According to the Sorting Hat what qualities does Ravenclaw possess?',
-        image: 'images/swars6.jpg',
+        image: 'images/potter6.jpg',
         optionA: 'A. Courage and Bravery',
         optionB: 'B. Intelligence and Learning',
         optionC: 'C. Hard Work and Patience',
@@ -808,7 +808,7 @@ const potterQuestions = [
     },
     {
         question: 'Where is Azkaban fortress located?',
-        image: 'images/swars7.jpg',
+        image: 'images/potter7.jpg',
         optionA: 'A. The North Sea',
         optionB: 'B. Bodmin Moor',
         optionC: 'C. Dartmoor',
@@ -817,16 +817,16 @@ const potterQuestions = [
     },
     {
         question: 'What are the first names of Voldemort’s parents?',
-        image: 'images/swars8.jpeg',
+        image: 'images/potter8.jpg',
         optionA: 'A. Percival & Kendra',
-        optionB: 'B. Frank & Alice',
-        optionC: 'C. Tom & Pandora',
-        optionD: 'D. Tom & Merope',
-        correct: 'D. Tom & Merope'
+        optionB: 'B. Frank and Alice',
+        optionC: 'C. Tom and Pandora',
+        optionD: 'D. Tom and Merope',
+        correct: 'D. Tom and Merope'
     },
     {
         question: 'What is Harry’s wand’s core?',
-        image: 'images/swars9.jpeg',
+        image: 'images/potter9.jpg',
         optionA: 'A. Unicorn Hair',
         optionB: 'B. Phoenix Feather',
         optionC: 'C. Dragon Heartstring',
@@ -835,7 +835,7 @@ const potterQuestions = [
     },
     {
         question: 'A wizard who cannot do magic is known as what?',
-        image: 'images/swars10.jpg',
+        image: 'images/potter10.jpg',
         optionA: 'A. Muggle',
         optionB: 'B. Scrub',
         optionC: 'C. Squib',
@@ -1467,6 +1467,63 @@ $('.swars__finish').click(function() {
     $('.questions').toggleClass('hidden');
     $('.swars__replay').toggleClass('hidden');
     $('.swars__finish').toggleClass('hidden');
+    $('.score').toggleClass('hidden');
+    $('.launch').toggleClass('hidden');
+});
+
+
+
+/* potter Buttons */
+// Initialize potter trivia game
+$('.potter').click(function() {
+    $('.quiz-container').toggleClass('hidden');
+    displayQuestions(potterQuestions[0]);
+    $('.launch').toggleClass('hidden');
+    $('.potter__button').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+});
+
+// potter button to verify answers in game
+$('.potter__button').click(function() {
+    // const $answer = $('input[name=answers]:checked').siblings('label').html();
+    checkValue(potterQuestions[questionTracker]);
+    questionTracker++;
+    if ( questionTracker == 10 ) {
+        $gameCheck();
+        $('.potter__button').toggleClass('hidden');
+        $('.potter__replay').toggleClass('hidden');
+        $('.potter__finish').toggleClass('hidden');
+    } else {
+        $removeSelection();
+        displayQuestions(potterQuestions[questionTracker]);
+    }
+});
+
+// Replay potter match
+$('.potter__replay').click(function() {
+    $('.score').toggleClass('hidden');
+    $('.potter__button').toggleClass('hidden');
+    // $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.potter__replay').toggleClass('hidden');
+    $('.potter__finish').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+    displayQuestions(potterQuestions[0]);
+    $removeSelection();
+});
+
+// Return to launch screen from potter game
+$('.potter__finish').click(function() {
+    // $('.score').toggleClass('hidden');
+    $removeSelection();
+    $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.potter__replay').toggleClass('hidden');
+    $('.potter__finish').toggleClass('hidden');
     $('.score').toggleClass('hidden');
     $('.launch').toggleClass('hidden');
 });
