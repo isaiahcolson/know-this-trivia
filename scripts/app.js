@@ -972,7 +972,7 @@ const $removeSelection = () => {
 // Display correct score progress bar
 const $scoreImg = (score) => {
     if ( score == 0 ) {
-        $('.score__text h2').eq(1).css('background-image', 'url(images/0per.png)');
+        $('.score__text h2').eq(1).css('background-image', 'url(../images/0per.png)');
     } else if ( score == 1 ) {
         $('.score__text h2').eq(1).css('background-image', 'url(images/10per.png)');
     } else if ( score == 2 ) {
