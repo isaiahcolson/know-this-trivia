@@ -848,7 +848,7 @@ const potterQuestions = [
 const simpsonsQuestions = [
     {
         question: 'Who was Bart\'s best friend named after?',
-        image: 'images/swars1.jpg',
+        image: 'images/simpsons1.png',
         optionA: 'A. Richard Nixon',
         optionB: 'B. Charlie Chaplin',
         optionC: 'C. John Wayne',
@@ -857,7 +857,7 @@ const simpsonsQuestions = [
     },
     {
         question: 'What beverage did Homer create?',
-        image: 'images/swars2.jpg',
+        image: 'images/simpsons2.jpg',
         optionA: 'A. Voodoo Homer',
         optionB: 'B. Salty Homer',
         optionC: 'C. Flaming Homer',
@@ -866,7 +866,7 @@ const simpsonsQuestions = [
     },
     {
         question: 'In "Simpsons Roasting on an Open Fire", what does Bart want for Christmas?',
-        image: 'images/swars3.jpeg',
+        image: 'images/simpsons3.jpeg',
         optionA: 'A. Rifle',
         optionB: 'B. Tattoo',
         optionC: 'C. Samurai Sword',
@@ -875,7 +875,7 @@ const simpsonsQuestions = [
     },
     {
         question: 'What is the name of Mr. Burns’ teddy bear?',
-        image: 'images/swars4.jpg',
+        image: 'images/simpsons4.jpg',
         optionA: 'A. Bobo',
         optionB: 'B. Togo',
         optionC: 'C. Nono',
@@ -884,7 +884,7 @@ const simpsonsQuestions = [
     },
     {
         question: 'What is the name of Homer’s brother?',
-        image: 'images/swars5.jpg',
+        image: 'images/simpsons5.jpg',
         optionA: 'A. Hank Simpson',
         optionB: 'B. Herbert Powell',
         optionC: 'C. Hank Powell',
@@ -893,7 +893,7 @@ const simpsonsQuestions = [
     },
     {
         question: 'What did Homer name his fourth child?',
-        image: 'images/swars6.jpg',
+        image: 'images/simpsons6.jpg',
         optionA: 'A. Snowball',
         optionB: 'B. Herb',
         optionC: 'C. Stitch Face',
@@ -902,7 +902,7 @@ const simpsonsQuestions = [
     },
     {
         question: 'What is the name of the cocktail waitress Ned married?',
-        image: 'images/swars7.jpg',
+        image: 'images/simpsons7.jpg',
         optionA: 'A. Summer',
         optionB: 'B. Candy',
         optionC: 'C. Amber',
@@ -911,7 +911,7 @@ const simpsonsQuestions = [
     },
     {
         question: 'Which of these is not one of Cletus\' kid\'s names?',
-        image: 'images/swars8.jpeg',
+        image: 'images/simpsons8.png',
         optionA: 'A. Crystal Meth',
         optionB: 'B. Minimum Wade',
         optionC: 'C. Barbara',
@@ -920,7 +920,7 @@ const simpsonsQuestions = [
     },
     {
         question: 'What is Homer\'s email address?',
-        image: 'images/swars9.jpeg',
+        image: 'images/simpsons9.jpg',
         optionA: 'A. groening67@yahoo.com',
         optionB: 'B. chunkylover53@aol.com',
         optionC: 'C. dohsimp76@aol.com',
@@ -929,7 +929,7 @@ const simpsonsQuestions = [
     },
     {
         question: 'Where did Lionel Hutz claim to get his law degree?',
-        image: 'images/swars10.jpg',
+        image: 'images/simpsons10.jpg',
         optionA: 'A. Princeton',
         optionB: 'B. Harvord',
         optionC: 'C. Penn',
@@ -1524,6 +1524,63 @@ $('.potter__finish').click(function() {
     $('.questions').toggleClass('hidden');
     $('.potter__replay').toggleClass('hidden');
     $('.potter__finish').toggleClass('hidden');
+    $('.score').toggleClass('hidden');
+    $('.launch').toggleClass('hidden');
+});
+
+
+
+/* simpsons Buttons */
+// Initialize simpsons trivia game
+$('.simpsons').click(function() {
+    $('.quiz-container').toggleClass('hidden');
+    displayQuestions(simpsonsQuestions[0]);
+    $('.launch').toggleClass('hidden');
+    $('.simpsons__button').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+});
+
+// simpsons button to verify answers in game
+$('.simpsons__button').click(function() {
+    // const $answer = $('input[name=answers]:checked').siblings('label').html();
+    checkValue(simpsonsQuestions[questionTracker]);
+    questionTracker++;
+    if ( questionTracker == 10 ) {
+        $gameCheck();
+        $('.simpsons__button').toggleClass('hidden');
+        $('.simpsons__replay').toggleClass('hidden');
+        $('.simpsons__finish').toggleClass('hidden');
+    } else {
+        $removeSelection();
+        displayQuestions(simpsonsQuestions[questionTracker]);
+    }
+});
+
+// Replay simpsons match
+$('.simpsons__replay').click(function() {
+    $('.score').toggleClass('hidden');
+    $('.simpsons__button').toggleClass('hidden');
+    // $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.simpsons__replay').toggleClass('hidden');
+    $('.simpsons__finish').toggleClass('hidden');
+    questionTracker = 0;
+    userScore = 0;
+    displayQuestions(simpsonsQuestions[0]);
+    $removeSelection();
+});
+
+// Return to launch screen from simpsons game
+$('.simpsons__finish').click(function() {
+    // $('.score').toggleClass('hidden');
+    $removeSelection();
+    $('.quiz-container').toggleClass('hidden');
+    $('.img').toggleClass('hidden');
+    $('.questions').toggleClass('hidden');
+    $('.simpsons__replay').toggleClass('hidden');
+    $('.simpsons__finish').toggleClass('hidden');
     $('.score').toggleClass('hidden');
     $('.launch').toggleClass('hidden');
 });

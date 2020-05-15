@@ -42,7 +42,7 @@ h1 {
 
 .launch__grid {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     border-radius: var(--border-radius);
 }
 
@@ -51,7 +51,7 @@ h1 {
     cursor: pointer;
     margin: 5px;
     border-radius: var(--border-radius);
-    background-size: 150px;
+    background-size: 125px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -92,12 +92,16 @@ h1 {
     background-image: url("../images/potterthumb.jpg");
 }
 
+.simpsons {
+    background-image: url("../images/simpsonsthumb.jpg");
+}
+
 .grid__item img:hover {
     opacity: 0;
 }
 
 .grid__item img {
-    width: 150px;
+    width: 125px;
     border-radius: var(--border-radius);
     overflow: hidden;
     vertical-align: middle;
@@ -183,6 +187,10 @@ h1 {
 
 .potter:hover ~ .bg {
     background-image: url(../images/potterlaunchbg.png);
+}
+
+.simpsons:hover ~ .bg {
+    background-image: url(../images/simpsonslaunchbg.png);
 }
 
 .questions {
