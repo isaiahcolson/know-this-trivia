@@ -57,35 +57,35 @@ h1 {
 }
 
 .ram {
-    background-image: url("images/ramthumb.png");
+    background-image: url("../images/ramthumb.png");
 }
 
 .lotr {
-    background-image: url("images/lotrthumb.png");
+    background-image: url("../images/lotrthumb.png");
 }
 
 .sthings {
-    background-image: url("images/sthingsthumb.jpg");
+    background-image: url("../images/sthingsthumb.jpg");
 }
 
 .dis {
-    background-image: url("images/disthumb.jpg");
+    background-image: url("../images/disthumb.jpg");
 }
 
 .marv {
-    background-image: url("images/marvthumb.jpg");
+    background-image: url("../images/marvthumb.jpg");
 }
 
 .swars {
-    background-image: url("images/swarsthumb.jpg");
+    background-image: url("../images/swarsthumb.jpg");
 }
 
 .office {
-    background-image: url("images/officethumb.jpg");
+    background-image: url("../images/officethumb.jpg");
 }
 
 .bttf {
-    background-image: url("images/bttfthumb.jpeg");
+    background-image: url("../images/bttfthumb.jpeg");
 }
 
 .grid__item img:hover {
@@ -107,7 +107,7 @@ h1 {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    background-image: url(images/questionbackground.png);
+    background-image: url(../images/questionbackground.png);
     border-radius: var(--border-radius);
     box-shadow: 0px 15px 15px 5px rgba(0,0,0,.2);
     overflow: hidden;
@@ -122,7 +122,7 @@ h1 {
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    background-image: url(images/launchbg.png);
+    background-image: url(../images/launchbg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -138,7 +138,7 @@ h1 {
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    background-image: url(images/quizbg2.png);
+    background-image: url(../images/quizbg2.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -146,35 +146,35 @@ h1 {
 }
 
 .ram:hover ~ .bg {
-    background-image: url(images/ramlaunchbg.png);
+    background-image: url(../images/ramlaunchbg.png);
 }
 
 .lotr:hover ~ .bg {
-    background-image: url(images/lotrlaunchbg.png);
+    background-image: url(../images/lotrlaunchbg.png);
 }
 
 .sthings:hover ~ .bg {
-    background-image: url(images/sthingslaunchbg.png);
+    background-image: url(../images/sthingslaunchbg.png);
 }
 
 .dis:hover ~ .bg {
-    background-image: url(images/dislaunchbg.png);
+    background-image: url(../images/dislaunchbg.png);
 }
 
 .marv:hover ~ .bg {
-    background-image: url(images/marvlaunchbg.png);
+    background-image: url(../images/marvlaunchbg.png);
 }
 
 .swars:hover ~ .bg {
-    background-image: url(images/swarslaunchbg.png);
+    background-image: url(../images/swarslaunchbg.png);
 }
 
 .office:hover ~ .bg {
-    background-image: url(images/officelaunchbg.png);
+    background-image: url(../images/officelaunchbg.png);
 }
 
 .bttf:hover ~ .bg {
-    background-image: url(images/bttflaunchbg.png);
+    background-image: url(../images/bttflaunchbg.png);
 }
 
 .questions {
@@ -215,7 +215,7 @@ h2 {
 .score {
     grid-template-columns: auto auto;
     display: grid;
-    background-image: url(images/scorebackground.png);
+    background-image: url(../images/scorebackground.png);
     width: 700px;
     height: 350px;
     text-align: center;
@@ -228,7 +228,7 @@ h2 {
 }
 
 .score h2:nth-child(2) {
-    background-image: url(images/10per.png);
+    background-image: url(../images/10per.png);
     background-repeat: no-repeat;
     background-size: auto;
     height: 150px;
