@@ -972,27 +972,27 @@ const $removeSelection = () => {
 // Display correct score progress bar
 const $scoreImg = (score) => {
     if ( score == 0 ) {
-        $('.score__text h2').eq(1).css('background-image', 'url(../images/0per.png)');
+        $('.score__text h2').eq(1).css('background-image', 'url(images/0per.png)');
     } else if ( score == 1 ) {
-        $('.score__text h2').eq(1).css('background-image', 'url(../images/10per.png)');
+        $('.score__text h2').eq(1).css('background-image', 'url(images/10per.png)');
     } else if ( score == 2 ) {
-        $('.score__text h2').eq(1).css('background-image', 'url(../images/20per.png)');
+        $('.score__text h2').eq(1).css('background-image', 'url(images/20per.png)');
     } else if ( score == 3 ) {
-        $('.score__text h2').eq(1).css('background-image', 'url(../images/30per.png)');
+        $('.score__text h2').eq(1).css('background-image', 'url(images/30per.png)');
     } else if ( score == 4 ) {
-        $('.score__text h2').eq(1).css('background-image', 'url(../images/40per.png)');
+        $('.score__text h2').eq(1).css('background-image', 'url(images/40per.png)');
     } else if ( score == 5 ) {
-        $('.score__text h2').eq(1).css('background-image', 'url(../images/50per.png)');
+        $('.score__text h2').eq(1).css('background-image', 'url(images/50per.png)');
     } else if ( score == 6 ) {
-        $('.score__text h2').eq(1).css('background-image', 'url(../images/60per.png)');
+        $('.score__text h2').eq(1).css('background-image', 'url(images/60per.png)');
     } else if ( score == 7 ) {
-        $('.score__text h2').eq(1).css('background-image', 'url(../images/70per.png)');
+        $('.score__text h2').eq(1).css('background-image', 'url(images/70per.png)');
     } else if ( score == 8 ) {
-        $('.score__text h2').eq(1).css('background-image', 'url(../images/80per.png)');
+        $('.score__text h2').eq(1).css('background-image', 'url(images/80per.png)');
     } else if ( score == 9 ) {
-        $('.score__text h2').eq(1).css('background-image', 'url(../images/90per.png)');
+        $('.score__text h2').eq(1).css('background-image', 'url(images/90per.png)');
     } else {
-        $('.score__text h2').eq(1).css('background-image', 'url(../images/100per.png)');
+        $('.score__text h2').eq(1).css('background-image', 'url(images/100per.png)');
     }
 }
 
