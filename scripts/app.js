@@ -931,7 +931,7 @@ const simpsonsQuestions = [
         question: 'Where did Lionel Hutz claim to get his law degree?',
         image: 'images/simpsons10.jpg',
         optionA: 'A. Princeton',
-        optionB: 'B. Harvord',
+        optionB: 'B. Harvard',
         optionC: 'C. Penn',
         optionD: 'D. Quinnipiac',
         correct: 'A. Princeton'
